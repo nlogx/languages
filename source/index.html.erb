@@ -1,22 +1,44 @@
 ---
 title: Welcome to languages
 ---
-
-<table>
-  <thead>
-    <tr>
-      <th>Keywords</th>
-      <th>Ruby</th>
-      <th>JavaScript</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% data.functions.each do |method| %>
-    <tr>
-      <td><%= method.keyword %></td>
-      <td><%= method.ruby %></td>
-      <td><%= method.js %></td>
-    </tr>
-    <% end %>
-  </tbody>
-</table>
+<div class="container">
+    <table>
+        <caption><h3>Syntax</h3>
+        </caption>
+        <thead>
+            <tr>
+                <th>Keywords</th>
+                <th>Ruby</th>
+                <th>JavaScript</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% data.conventions.each do |c| %>
+            <tr>
+                <td>
+                    <%= c.keyword %>
+                </td>
+                <td>
+                    <%= c.ruby %>
+                </td>
+                <td>
+                    <%= c.js %>
+                </td>
+            </tr>
+            <% end %>
+            <% data.functions.each do |f| %>
+            <tr>
+                <td>
+                    <%= f.keyword %>
+                </td>
+                <td>
+                    <%= f.ruby %>
+                </td>
+                <td>
+                    <%= f.js %>
+                </td>
+            </tr>
+            <% end %>
+        </tbody>
+    </table>
+</div>

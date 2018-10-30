@@ -1,9 +1,22 @@
-- keyword: "comment"
-  ruby: "#"
-  js: "//"
-- keyword: "each"
+- keyword: each
   ruby: "items.each { |item| # do something }"
   js: "items.forEach(item => // do something );"
-# - key:
-#   ruby:
-#   js:
+- keyword: map
+  ruby: "items"
+  js:
+- keyword:
+  ruby:
+  js:
+- keyword:
+  ruby:
+  js:
+- keyword:
+  ruby:
+  js:
+- keyword:
+  ruby:
+  js:
+- keyword:
+  ruby:
+  js:
+

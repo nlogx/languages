@@ -5,6 +5,8 @@ activate :autoprefixer do |prefix|
   prefix.browsers = "last 2 versions"
 end
 
+activate :sprockets
+
 # Layouts
 # https://middlemanapp.com/basics/layouts/
 
@@ -12,6 +14,24 @@ end
 page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
+
+configure :build do
+  activate :minify_css
+  activate :minify_javascript
+  activate :asset_hash
+  activate :relative_assets
+  set :relative_links, true
+end
+
+activate :deploy do |deploy|
+  deploy.build_before = true
+  deploy.deploy_method = :git
+  # Optional Settings
+  # deploy.remote   = 'custom-remote' # remote name or git url, default: origin
+  # deploy.branch   = 'custom-branch' # default: gh-pages
+  # deploy.strategy = :submodule      # commit strategy: can be :force_push or :submodule, default: :force_push
+  # deploy.commit_message = 'custom-message'      # commit message (can be empty), default: Automated commit at `timestamp` by middleman-deploy `version`
+end
 
 # With alternative layout
 # page '/path/to/file.html', layout: 'other_layout'
@@ -40,7 +60,4 @@ page '/*.txt', layout: false
 # Build-specific configuration
 # https://middlemanapp.com/advanced/configuration/#environment-specific-settings
 
-configure :build do
-  activate :minify_css
-  activate :minify_javascript
-end
+
