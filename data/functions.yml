@@ -1,0 +1,9 @@
+- keyword: "comment"
+  ruby: "#"
+  js: "//"
+- keyword: "each"
+  ruby: "items.each { |item| # do something }"
+  js: "items.forEach(item => // do something );"
+# - key:
+#   ruby:
+#   js:
