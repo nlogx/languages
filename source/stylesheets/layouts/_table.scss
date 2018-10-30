@@ -1,10 +1,19 @@
 table {
   width: 800px;
   margin: 0 auto;
+  box-shadow: 0 20px 20px -22px $dark-sand;
 }
 
 h3 {
   margin: 30px auto;
   color: #333;
   opacity: 0.9;
+}
+
+th {
+  border-bottom: 1px solid #755f34;
+}
+
+tr {
+  border-bottom: 1px dotted #a57d2c;
 }
