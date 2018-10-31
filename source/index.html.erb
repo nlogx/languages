@@ -1,9 +1,9 @@
 ---
-title: Welcome to languages
+title: Ruby vs. JavaScript
 ---
 <div class="container">
     <table>
-        <caption><h3>Syntax</h3>
+        <caption><h3>Quick Syntax</h3>
         </caption>
         <thead>
             <tr>
@@ -13,29 +13,30 @@ title: Welcome to languages
             </tr>
         </thead>
         <tbody>
-            <% data.conventions.each do |c| %>
+            <% data.basics.each do |c| %>
             <tr>
                 <td>
-                    <%= c.keyword %>
+                     <%= c.keyword %>
                 </td>
                 <td>
-                    <%= c.ruby %>
+                    <pre class="lang1"><%= c.ruby %></pre>
                 </td>
                 <td>
-                    <%= c.js %>
+                    <pre class="lang2"><%= c.js %></pre>
                 </td>
             </tr>
             <% end %>
+            <!-- Whatever is here will appear at the top -->
             <% data.functions.each do |f| %>
             <tr>
                 <td>
                     <%= f.keyword %>
                 </td>
                 <td>
-                    <%= f.ruby %>
+                    <pre class="lang1"><%= f.ruby %></pre>
                 </td>
                 <td>
-                    <%= f.js %>
+                    <pre class="lang2"><%= f.js %></pre>
                 </td>
             </tr>
             <% end %>

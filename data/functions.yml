@@ -1,22 +1,107 @@
-- keyword: each
-  ruby: "items.each { |item| # do something }"
-  js: "items.forEach(item => // do something );"
-- keyword: map
-  ruby: "items"
-  js:
-- keyword:
-  ruby:
-  js:
-- keyword:
-  ruby:
-  js:
-- keyword:
-  ruby:
-  js:
-- keyword:
-  ruby:
-  js:
-- keyword:
-  ruby:
-  js:
+
+- keyword: defining funtions
+  ruby: |
+    def square(x)
+      x * x
+    end
+  js: |
+    function square(x) {
+      return x * x;
+    }
+- keyword: short functions (arrow lambda proc)
+  ruby: |
+    square = -> (x) { x * x }
+    square = lambda {|x| x * x }
+    sqaure = Proc.new {|x| x * x}
+    square.call(5) # => 10
+  js: const square = x => x * x;
+
+- keyword: switch case
+  ruby: |
+    case var
+    when 1..50
+      #
+    when 61..100
+      #
+    else
+      #
+    end
+  js: |
+    switch(var) {
+      case x:
+        return x;
+        break;
+      case y:
+        return y;
+        break;
+      default:
+        return 0;
+    }
+- keyword: if else
+  ruby: |
+    if condition_1
+      "condition_1"
+    elsif condition_2
+      "condition_2"
+    else
+      "other"
+    end
+  js: |
+    if (condition_1) {
+      return "condition_1";
+    } else if (condition_2) {
+      return "condition_2";
+    } else {
+      return "other";
+    }
+
+- keyword: loop each
+  ruby: |
+    items.each { |item| # do something }
+    items.each_with_index { |item, i| items[i] }
+  js: |
+    items.forEach(item => // do something );
+    items.forEach((x, index) => items[index] = x * 2 );
+- keyword: select filter
+  ruby: |
+    array.select {|x| x.even? }
+    array.reject {|x| x.odd? }
+  js: array.filter(x => x % 2 == 0);
+- keyword: reduce
+  ruby: |
+    array.reduce(:+)
+    array.reduce(0) {|sum, curr| sum + curr}
+  js: array.reduce((sum, curr) => sum + curr);
+
+#####################################################################
+
+- keyword: hash object
+  ruby: |
+    hash = { name: "Iff", age: 33 }
+    hash.keys       # [:name, :age]
+    hash[:name]
+    hash[:new_key] = value;
+  js: |
+    const obj = { name: "Iff", age: 33 };
+    Object.keys;       // ['name', 'age']
+    obj.name;
+    obj.new_key = value;
+    obj.set(key, value);
+
+- keyword: hash map iterator
+  ruby: |
+    hash.each { |key, value| #... }
+  js: |
+    obj.forEach((value, key) => { //... });
+# - keyword:
+#   ruby:
+#   js:
+
+# - keyword:
+#   ruby:
+#   js:
+# - keyword:
+#   ruby:
+#   js:
+
 

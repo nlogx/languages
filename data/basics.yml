@@ -1,0 +1,138 @@
+- keyword: terminal
+  ruby: |
+    irb # ruby playground
+    ruby file.rb
+  js: |
+    node // js playground
+    node file.js
+- keyword: naming convention
+  ruby: |
+    snake_case            # local variables, methods
+    method_suffixes = ? ! # setter, bool, bang
+    PascalCase            # classes, modules
+  js: |
+    lowerCamelCase  // objects, functions, instances
+    PascalCase      // classes, constructors
+- keyword: identifiers
+  ruby: |
+    :var      # symbol
+    &var      # block
+    CONST_VAR # constants
+    $var      # global variable
+    @@var     # class variable
+    @var      # instance variable
+  js: |
+    _var    // private
+- keyword: declaration
+  ruby: var_name = "value"
+  js: |
+    let var; // undefined
+    let varName = "value";
+    const constName = "value";
+- keyword: string interpolation
+  ruby: puts "\"#{var_name}\""
+  js: console.log(`${varName}`);
+- keyword: string concatenation
+  ruby: |
+    "1" + "10"        # "110"
+    "z" * 3           # "zzz"
+    "z" * 3 + ".."    # "zzz.."
+    "abc" + 123       # TypeError
+    "5" * "3"         # TypeError
+  js: |
+    "1" + "10"        // "110"
+    "z" * 3           // NaN
+    "z" * 3 + ".."    // "NaN.."
+    "abc" + 123       // "abc123"
+    "5" * "3"         // 15
+- keyword: equal
+  ruby: |
+    1 == 1.0        # true
+    (1..5) === 3    # true
+    1.eql? 1.0      # false
+    123.equal? 123  # true
+    "1".equal? "1"  # false (different object id)
+  js: |
+    123 == "123"   // true
+    123 === "123"  // false
+- keyword: type conversion
+  ruby: |
+    str.to_i
+    num.to_f
+    int.to_s
+  js: |
+    parseInt(str, 10);
+    parseFloat(num);
+    int.toString();
+- keyword: falsy values
+  ruby: |
+    false
+    nil
+  js: |
+    false
+    null
+    undefined
+    NaN
+    ''
+- keyword: type check
+  ruby: obj.class
+  js: typeof obj
+
+- keyword: remove white spaces
+  ruby: str.strip
+  js: str.trim();
+- keyword: string caps
+  ruby: |
+    str.upcase
+    str.downcase
+    str.capitalize
+  js: |
+    str.toUpperCase();
+    str.toLowerCase();
+- keyword: string index
+  ruby: |
+    str[i]
+  js: |
+    str[i];
+    str.charAt(i);
+- keyword: string last char
+  ruby: str[-1]
+  js: |
+    str.slice(-1);
+    str.substr(-1);
+- keyword: regex match
+  ruby: |
+    str.match(regexp) # returns a <MatchData>
+  js: |
+    str.match(regexp) // returns an Array
+    pattern.exec(text);
+- keyword: array crud
+  ruby: |
+    array.push(obj)
+    array << obj
+  js: |
+    array.push(obj);
+    array.splice(index, count, items);
+    array.splice(3, 1);
+    // remove: modify 1 item at index 3 to null
+- keyword: first n elements
+  ruby: |
+    objs.first(n)
+    objs.take(n)
+    objs[0...n]
+    objs[0, n]
+  js: |
+    objs.slice(0, n);
+    const array = [1,2,3,4,5];
+    array.length = 3; // array is now [1, 2, 3]
+#####################################################################
+
+# - keyword:
+#   ruby:
+#   js:
+# - keyword:
+#   ruby:
+#   js:
+
+
+
