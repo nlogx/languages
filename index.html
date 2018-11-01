@@ -113,14 +113,40 @@ const constName = "value";
             </tr>
             <tr>
                 <td>
+                     date time
+                </td>
+                <td>
+                    <pre class="lang1">Date.today    # Date: 2018-11-01 ((2458424j,0s,0n))
+Time.now      # Time: 2018-11-01 15:32:07 +0900
+t = Time.new
+t.to_date
+t.to_s
+t.hour
+t.min
+t.sec
+</pre>
+                </td>
+                <td>
+                    <pre class="lang2">Date.now();            // number 1541041100273
+const d = new Date();  // object 2018-11-01T02:51:48.938Z
+Date.parse(d);
+d.getTime();
+d.getHours();
+d.getMinutes();
+d.getSeconds();
+</pre>
+                </td>
+            </tr>
+            <tr>
+                <td>
                      string concatenation
                 </td>
                 <td>
-                    <pre class="lang1">"1" + "10"        # "110"
-"z" * 3           # "zzz"
-"z" * 3 + ".."    # "zzz.."
-"abc" + 123       # TypeError
-"5" * "3"         # TypeError
+                    <pre class="lang1">"1" + "10"      # "110"
+"z" * 3         # "zzz"
+"z" * 3 + ".."  # "zzz.."
+"abc" + 123     # TypeError
+"5" * "3"       # TypeError
 </pre>
                 </td>
                 <td>
@@ -255,7 +281,7 @@ str.substr(-1);
                      regex match
                 </td>
                 <td>
-                    <pre class="lang1">str.match(regexp) # returns a <MatchData>
+                    <pre class="lang1">str.match(regexp) # returns a MatchData
 </pre>
                 </td>
                 <td>
@@ -324,12 +350,14 @@ end
                 <td>
                     <pre class="lang1">square = -> (x) { x * x }
 square = lambda {|x| x * x }
-sqaure = Proc.new {|x| x * x}
+square = Proc.new {|x| x * x}
 square.call(5) # => 10
 </pre>
                 </td>
                 <td>
-                    <pre class="lang2">const square = x => x * x;</pre>
+                    <pre class="lang2">const square = x => x * x;
+const square = (x, y) => { x * y }
+</pre>
                 </td>
             </tr>
             <tr>
@@ -432,14 +460,14 @@ array.reduce(0) {|sum, curr| sum + curr}
                     hash object
                 </td>
                 <td>
-                    <pre class="lang1">hash = { name: "Iff", age: 33 }
+                    <pre class="lang1">hash = { name: "Iff", age: 3 }
 hash.keys       # [:name, :age]
 hash[:name]
 hash[:new_key] = value;
 </pre>
                 </td>
                 <td>
-                    <pre class="lang2">const obj = { name: "Iff", age: 33 };
+                    <pre class="lang2">const obj = { name: "Iff", age: 3 };
 Object.keys;       // ['name', 'age']
 obj.name;
 obj.new_key = value;
@@ -457,6 +485,115 @@ obj.set(key, value);
                 </td>
                 <td>
                     <pre class="lang2">obj.forEach((value, key) => { //... });
+</pre>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    class structure
+                </td>
+                <td>
+                    <pre class="lang1">class MyClass
+  attr_accessor
+  def initialize
+    # ...
+  end
+
+  def method1 / end
+  def method2(...) / end
+  def self.class_method / end
+  # ...
+end
+</pre>
+                </td>
+                <td>
+                    <pre class="lang2">class MyClass {
+  constructor(...) {
+    // ...
+  }
+  get something(...) { return ... }
+  set something(...) {}
+  method1(...) {}
+  method2(...) {}
+  static staticMethod(..) {}
+  // ...
+}
+</pre>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    class example
+                </td>
+                <td>
+                    <pre class="lang1">class Person
+  attr_reader :name :age
+  attr_writer :country
+
+  def initialize(name, age, country)
+    @name = name,
+    @age = age,
+    @country = country
+  end
+
+  def country
+    @country
+  end
+
+  def walk
+    puts @name + ' is walking.'
+  end
+end
+
+iff = Person.new("Iff", 3, "Tokyo")
+iff.class     # Person
+</pre>
+                </td>
+                <td>
+                    <pre class="lang2">class Person
+  constructor(name, age, country) {
+    this.name = name;
+    this.age = age;
+    this._country
+  }
+
+  get country() {
+    return this._country;
+  }
+
+  set country(newCountry) {
+    this._country = newCountry;
+  }
+
+  walk() {
+    console.log(this.name + ' is walking.');
+  }
+
+const iff = new User("Iff", 3, "Tokyo");
+typeof iff    // 'object'
+</pre>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    subclass inheritance
+                </td>
+                <td>
+                    <pre class="lang1">class Programmer < Person
+  def initialize(name, age, country, language)
+    super(name, age, country)
+    @languages = language
+  end
+end
+</pre>
+                </td>
+                <td>
+                    <pre class="lang2">class Programmer extends Person {
+  constructor(name, age, country, language)) {
+    super(name, age, country);
+    this.language = language;
+  }
+}
 </pre>
                 </td>
             </tr>
