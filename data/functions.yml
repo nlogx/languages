@@ -10,13 +10,13 @@
     }
 - keyword: short functions (arrow lambda proc)
   ruby: |
-    square = (x) => { x * x }
     square = -> (x) { x * x }
     square = lambda {|x| x * x }
     square = Proc.new {|x| x * x}
     square.call(5) # => 10
-  js: const square = x => x * x;
-
+  js: |
+    const square = x => x * x;
+    const square = (x, y) => { x * y }
 - keyword: switch case
   ruby: |
     case var
