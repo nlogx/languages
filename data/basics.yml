@@ -32,13 +32,32 @@
 - keyword: string interpolation
   ruby: puts "\"#{var_name}\""
   js: console.log(`${varName}`);
+######### DATE TIME ########
+- keyword: date time
+  ruby: |
+    Date.today    # Date: 2018-11-01 ((2458424j,0s,0n))
+    Time.now      # Time: 2018-11-01 15:32:07 +0900
+    t = Time.new
+    t.to_date
+    t.to_s
+    t.hour
+    t.min
+    t.sec
+  js: |
+    Date.now();            // number 1541041100273
+    const d = new Date();  // object 2018-11-01T02:51:48.938Z
+    Date.parse(d);
+    d.getTime();
+    d.getHours();
+    d.getMinutes();
+    d.getSeconds();
 - keyword: string concatenation
   ruby: |
-    "1" + "10"        # "110"
-    "z" * 3           # "zzz"
-    "z" * 3 + ".."    # "zzz.."
-    "abc" + 123       # TypeError
-    "5" * "3"         # TypeError
+    "1" + "10"      # "110"
+    "z" * 3         # "zzz"
+    "z" * 3 + ".."  # "zzz.."
+    "abc" + 123     # TypeError
+    "5" * "3"       # TypeError
   js: |
     "1" + "10"        // "110"
     "z" * 3           // NaN
@@ -102,7 +121,7 @@
     str.substr(-1);
 - keyword: regex match
   ruby: |
-    str.match(regexp) # returns a <MatchData>
+    str.match(regexp) # returns a MatchData
   js: |
     str.match(regexp) // returns an Array
     pattern.exec(text);

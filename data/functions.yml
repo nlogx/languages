@@ -10,9 +10,10 @@
     }
 - keyword: short functions (arrow lambda proc)
   ruby: |
+    square = (x) => { x * x }
     square = -> (x) { x * x }
     square = lambda {|x| x * x }
-    sqaure = Proc.new {|x| x * x}
+    square = Proc.new {|x| x * x}
     square.call(5) # => 10
   js: const square = x => x * x;
 
@@ -77,12 +78,12 @@
 
 - keyword: hash object
   ruby: |
-    hash = { name: "Iff", age: 33 }
+    hash = { name: "Iff", age: 3 }
     hash.keys       # [:name, :age]
     hash[:name]
     hash[:new_key] = value;
   js: |
-    const obj = { name: "Iff", age: 33 };
+    const obj = { name: "Iff", age: 3 };
     Object.keys;       // ['name', 'age']
     obj.name;
     obj.new_key = value;
@@ -93,13 +94,91 @@
     hash.each { |key, value| #... }
   js: |
     obj.forEach((value, key) => { //... });
-# - keyword:
-#   ruby:
-#   js:
+- keyword: class structure
+  ruby: |
+    class MyClass
+      attr_accessor
+      def initialize
+        # ...
+      end
 
-# - keyword:
-#   ruby:
-#   js:
+      def method1 / end
+      def method2(...) / end
+      def self.class_method / end
+      # ...
+    end
+  js: |
+    class MyClass {
+      constructor(...) {
+        // ...
+      }
+      get something(...) { return ... }
+      set something(...) {}
+      method1(...) {}
+      method2(...) {}
+      static staticMethod(..) {}
+      // ...
+    }
+- keyword: class example
+  ruby: |
+    class Person
+      attr_reader :name :age
+      attr_writer :country
+
+      def initialize(name, age, country)
+        @name = name,
+        @age = age,
+        @country = country
+      end
+
+      def country
+        @country
+      end
+
+      def walk
+        puts @name + ' is walking.'
+      end
+    end
+
+    iff = Person.new("Iff", 3, "Tokyo")
+    iff.class     # Person
+  js: |
+    class Person
+      constructor(name, age, country) {
+        this.name = name;
+        this.age = age;
+        this._country
+      }
+
+      get country() {
+        return this._country;
+      }
+
+      set country(newCountry) {
+        this._country = newCountry;
+      }
+
+      walk() {
+        console.log(this.name + ' is walking.');
+      }
+
+    const iff = new User("Iff", 3, "Tokyo");
+    typeof iff    // 'object'
+- keyword: subclass inheritance
+  ruby: |
+    class Programmer < Person
+      def initialize(name, age, country, language)
+        super(name, age, country)
+        @languages = language
+      end
+    end
+  js: |
+    class Programmer extends Person {
+      constructor(name, age, country, language)) {
+        super(name, age, country);
+        this.language = language;
+      }
+    }
 # - keyword:
 #   ruby:
 #   js:
