@@ -1,0 +1,282 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="A quick reference for syntax differences between ? programming languages">
+    <!-- Use the title from a page's frontmatter if it has one -->
+    <title>JavaScript DOM</title>
+    <link href="stylesheets/site-3bf68609.css" rel="stylesheet" />
+    <script src="javascripts/site-5e152b99.js"></script>
+  </head>
+  <body style="background-color: #fbc547;">
+    <div class="navbar-top">
+    <div class="container">
+        <ul>
+            <li><a href="https://nlogx.github.io/profile/">
+                <i class="fa fa-cloud"></i></a></li>
+            <div>
+            <a href="/"><img class="logo" src="images/ruby-e08c1646.png" alt="Ruby"></img></a>
+            </div>
+            <li><a href="#"><i class="fa fa-globe"></i></a></li>
+
+        </ul>
+    </div>
+</div>
+
+    <div class="container">
+    <div class="container">
+        <h3>JavaScript DOM</h3>
+        <br>
+    </div>
+    <div class="container dom-table">
+        <div class="table-header">
+            <div class="row">
+                <div class="header-keywords col-xs-12 col-md-2">
+                    <h5><strong>Keywords</strong></h5>
+                </div>
+                <div class="header-code col-xs-12 col-sm-7 col-md-6">
+                    <h5><strong>Code</strong></h5>
+                </div>
+                <div class="header-notes col-xs-12 col-sm-5 col-md-4">
+                    <h5><strong>Notes</strong></h5>
+                </div>
+            </div>
+        </div>
+        <div class="dom-content">
+            <div class="dom-key">
+                <div class="row">
+                    <div class="col-xs-12 col-md-2 col-lg-1">
+                        <h5>targeting</h5><br>
+                    </div>
+                    <div class="col-code col-xs-12 col-sm-7 col-md-6 col-lg-6">
+                        <pre class="code">document.getElementById('someId');
+document.getElementsByClassName('someClass');
+document.getElementsByTagName('ul');
+document.querySelector('#someId div .someclass');
+document.querySelectorAll('.someClass');
+</pre>
+                    </div>
+                    <div class="col-notes col-xs-12 col-sm-5 col-md-4 col-lg-5">
+                        <pre class="notes"><em>getElementById returns one target
+querySelector returns the first target
+getElementsByClassName/TagName returns an array
+querySelectorAll returns a collection list
+</em></pre>
+                    </div>
+                </div>
+            </div>
+            <div class="dom-key">
+                <div class="row">
+                    <div class="col-xs-12 col-md-2 col-lg-1">
+                        <h5>window</h5><br>
+                    </div>
+                    <div class="col-code col-xs-12 col-sm-7 col-md-6 col-lg-6">
+                        <pre class="code">window.onload = function() {
+  console.log('window loaded');
+};
+
+window.reload();
+alert('msg');
+confirm('msg');
+prompt();
+</pre>
+                    </div>
+                    <div class="col-notes col-xs-12 col-sm-5 col-md-4 col-lg-5">
+                        <pre class="notes"><em></em></pre>
+                    </div>
+                </div>
+            </div>
+            <div class="dom-key">
+                <div class="row">
+                    <div class="col-xs-12 col-md-2 col-lg-1">
+                        <h5>event</h5><br>
+                    </div>
+                    <div class="col-code col-xs-12 col-sm-7 col-md-6 col-lg-6">
+                        <pre class="code">element.onclick
+</pre>
+                    </div>
+                    <div class="col-notes col-xs-12 col-sm-5 col-md-4 col-lg-5">
+                        <pre class="notes"><em></em></pre>
+                    </div>
+                </div>
+            </div>
+            <div class="dom-key">
+                <div class="row">
+                    <div class="col-xs-12 col-md-2 col-lg-1">
+                        <h5>event listener</h5><br>
+                    </div>
+                    <div class="col-code col-xs-12 col-sm-7 col-md-6 col-lg-6">
+                        <pre class="code">element.addEventListener('DOMContentLoaded', handler);
+                         'click'
+                         'focus'
+                         'blur'
+                         'reset'
+                         'submit'
+                         'keyup'
+                         'keydown'
+                         'keypress'
+                         'DOMContentLoaded'
+element.removeEventListener('click', handler);
+</pre>
+                    </div>
+                    <div class="col-notes col-xs-12 col-sm-5 col-md-4 col-lg-5">
+                        <pre class="notes"><em>const handler = (event) => { // handle event }
+
+event types: mouse, keyboard, form, view, clipboard, drag & drop, etc.
+https://developer.mozilla.org/en-US/docs/Web/Events
+</em></pre>
+                    </div>
+                </div>
+            </div>
+            <div class="dom-key">
+                <div class="row">
+                    <div class="col-xs-12 col-md-2 col-lg-1">
+                        <h5>element</h5><br>
+                    </div>
+                    <div class="col-code col-xs-12 col-sm-7 col-md-6 col-lg-6">
+                        <pre class="code">document.createElement('tagName');
+document.createTextNode('new text content');
+</pre>
+                    </div>
+                    <div class="col-notes col-xs-12 col-sm-5 col-md-4 col-lg-5">
+                        <pre class="notes"><em></em></pre>
+                    </div>
+                </div>
+            </div>
+            <div class="dom-key">
+                <div class="row">
+                    <div class="col-xs-12 col-md-2 col-lg-1">
+                        <h5>parent child nodes</h5><br>
+                    </div>
+                    <div class="col-code col-xs-12 col-sm-7 col-md-6 col-lg-6">
+                        <pre class="code">element.childNodes;
+element.parentNodes;
+</pre>
+                    </div>
+                    <div class="col-notes col-xs-12 col-sm-5 col-md-4 col-lg-5">
+                        <pre class="notes"><em></em></pre>
+                    </div>
+                </div>
+            </div>
+            <div class="dom-key">
+                <div class="row">
+                    <div class="col-xs-12 col-md-2 col-lg-1">
+                        <h5>add element</h5><br>
+                    </div>
+                    <div class="col-code col-xs-12 col-sm-7 col-md-6 col-lg-6">
+                        <pre class="code">parent.appendChild(childNode)
+parent.insertBefore(childBefore, childAfter)
+</pre>
+                    </div>
+                    <div class="col-notes col-xs-12 col-sm-5 col-md-4 col-lg-5">
+                        <pre class="notes"><em></em></pre>
+                    </div>
+                </div>
+            </div>
+            <div class="dom-key">
+                <div class="row">
+                    <div class="col-xs-12 col-md-2 col-lg-1">
+                        <h5>add html</h5><br>
+                    </div>
+                    <div class="col-code col-xs-12 col-sm-7 col-md-6 col-lg-6">
+                        <pre class="code">
+element.insertAdjacentHTML('beforebegin', html_str);
+                           'afterbegin'
+                           'beforeend'
+                           'afterend'
+</pre>
+                    </div>
+                    <div class="col-notes col-xs-12 col-sm-5 col-md-4 col-lg-5">
+                        <pre class="notes"><em>'beforeend'/'afterend' requires a parent tag
+</em></pre>
+                    </div>
+                </div>
+            </div>
+            <div class="dom-key">
+                <div class="row">
+                    <div class="col-xs-12 col-md-2 col-lg-1">
+                        <h5>class list</h5><br>
+                    </div>
+                    <div class="col-code col-xs-12 col-sm-7 col-md-6 col-lg-6">
+                        <pre class="code">element.classList.add('newClass');
+element.classList.remove('existingClass');
+element.classList.toggle('anotherName');
+element.classList.contains('foo');
+</pre>
+                    </div>
+                    <div class="col-notes col-xs-12 col-sm-5 col-md-4 col-lg-5">
+                        <pre class="notes"><em>classList.contains returns a boolean
+</em></pre>
+                    </div>
+                </div>
+            </div>
+            <div class="dom-key">
+                <div class="row">
+                    <div class="col-xs-12 col-md-2 col-lg-1">
+                        <h5>timer</h5><br>
+                    </div>
+                    <div class="col-code col-xs-12 col-sm-7 col-md-6 col-lg-6">
+                        <pre class="code">const timer = window.setTimeout(function, 5000);
+window.clearTimeout(timer);
+
+const intervalHandler = window.setInterval(function, 5000);
+window.clearInterval(intervalHandle);
+</pre>
+                    </div>
+                    <div class="col-notes col-xs-12 col-sm-5 col-md-4 col-lg-5">
+                        <pre class="notes"><em>setInterval repeats function every 5000ms
+</em></pre>
+                    </div>
+                </div>
+            </div>
+            <div class="dom-key">
+                <div class="row">
+                    <div class="col-xs-12 col-md-2 col-lg-1">
+                        <h5>fetch</h5><br>
+                    </div>
+                    <div class="col-code col-xs-12 col-sm-7 col-md-6 col-lg-6">
+                        <pre class="code">------ GET ------
+fetch(url) // takes in 1 para
+  .then(response => response.json())
+  .then((data) => {
+    // check data content and do something with data
+  });
+
+------ POST ------
+fetch(url, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ name: "dataName", content: "dataContent" }) // body contains info to send
+  }) // takes in 2 para
+  .then(response => response.json())
+  .then((data) => {
+    // check data content and do something with data
+  });
+</pre>
+                    </div>
+                    <div class="col-notes col-xs-12 col-sm-5 col-md-4 col-lg-5">
+                        <pre class="notes"><em></em></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+<div class="footer">
+  <div class="footer-links">
+    <a href="#"><i class="fab fa-github"></i></a>
+  </div>
+  <div class="footer-copyright">
+    nlogx <i class="fa fa-heart"></i>
+  </div>
+</div>
+</div>
+
+
+  </body>
+</html>

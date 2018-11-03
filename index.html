@@ -8,7 +8,7 @@
     <meta name="description" content="A quick reference for syntax differences between ? programming languages">
     <!-- Use the title from a page's frontmatter if it has one -->
     <title>Ruby vs. JavaScript</title>
-    <link href="stylesheets/site-40aace81.css" rel="stylesheet" />
+    <link href="stylesheets/site-3bf68609.css" rel="stylesheet" />
     <script src="javascripts/site-5e152b99.js"></script>
   </head>
   <body style="background-color: #fbc547;">
@@ -16,30 +16,36 @@
     <div class="container">
         <ul>
             <li><a href="https://nlogx.github.io/profile/">
-      <i class="fa fa-cloud"></i>
-    </a></li>
-            <li><a href="#">
-      <i class="fa fa-globe"></i>
-    </a></li>
+                <i class="fa fa-cloud"></i></a></li>
+            <div>
+            <a href="/"><img class="logo" src="images/ruby-e08c1646.png" alt="Ruby"></img></a>
+            </div>
+            <li><a href="#"><i class="fa fa-globe"></i></a></li>
+
         </ul>
     </div>
 </div>
 
     <div class="container">
     <table>
-        <caption><h3>Quick Syntax</h3>
+        <caption>
+            <h3>Quick Syntax</h3>
+            <ul class=list-links">
+                <li><a href="dom.html">Javascript DOM</a></li>
+                <li><a href="#">HTML tags</a></li>
+            </ul>
         </caption>
         <thead>
-            <tr>
-                <th>Keywords</th>
-                <th>Ruby</th>
-                <th>JavaScript</th>
+            <tr class="table-header">
+                <th class="header-keywords">Keywords</th>
+                <th class="header-first-lang">Ruby</th>
+                <th class="header-second-lang">JavaScript</th>
             </tr>
         </thead>
         <tbody>
-            <tr>
+            <tr class="row-basics">
                 <td>
-                     terminal
+                    terminal
                 </td>
                 <td>
                     <pre class="lang1">irb # ruby playground
@@ -52,9 +58,9 @@ node file.js
 </pre>
                 </td>
             </tr>
-            <tr>
+            <tr class="row-basics">
                 <td>
-                     naming convention
+                    naming convention
                 </td>
                 <td>
                     <pre class="lang1">snake_case            # local variables, methods
@@ -68,9 +74,9 @@ PascalCase      // classes, constructors
 </pre>
                 </td>
             </tr>
-            <tr>
+            <tr class="row-basics">
                 <td>
-                     identifiers
+                    identifiers
                 </td>
                 <td>
                     <pre class="lang1">:var      # symbol
@@ -86,9 +92,9 @@ $var      # global variable
 </pre>
                 </td>
             </tr>
-            <tr>
+            <tr class="row-basics">
                 <td>
-                     declaration
+                    declaration
                 </td>
                 <td>
                     <pre class="lang1">var_name = "value"</pre>
@@ -100,9 +106,9 @@ const constName = "value";
 </pre>
                 </td>
             </tr>
-            <tr>
+            <tr class="row-basics">
                 <td>
-                     string interpolation
+                    string interpolation
                 </td>
                 <td>
                     <pre class="lang1">puts "\"#{var_name}\""</pre>
@@ -111,9 +117,9 @@ const constName = "value";
                     <pre class="lang2">console.log(`${varName}`);</pre>
                 </td>
             </tr>
-            <tr>
+            <tr class="row-basics">
                 <td>
-                     date time
+                    date time
                 </td>
                 <td>
                     <pre class="lang1">Date.today    # Date: 2018-11-01 ((2458424j,0s,0n))
@@ -137,9 +143,9 @@ d.getSeconds();
 </pre>
                 </td>
             </tr>
-            <tr>
+            <tr class="row-basics">
                 <td>
-                     string concatenation
+                    string concatenation
                 </td>
                 <td>
                     <pre class="lang1">"1" + "10"      # "110"
@@ -158,9 +164,9 @@ d.getSeconds();
 </pre>
                 </td>
             </tr>
-            <tr>
+            <tr class="row-basics">
                 <td>
-                     equal
+                    equal
                 </td>
                 <td>
                     <pre class="lang1">1 == 1.0        # true
@@ -176,9 +182,9 @@ d.getSeconds();
 </pre>
                 </td>
             </tr>
-            <tr>
+            <tr class="row-basics">
                 <td>
-                     type conversion
+                    type conversion
                 </td>
                 <td>
                     <pre class="lang1">str.to_i
@@ -193,9 +199,9 @@ int.toString();
 </pre>
                 </td>
             </tr>
-            <tr>
+            <tr class="row-basics">
                 <td>
-                     falsy values
+                    falsy values
                 </td>
                 <td>
                     <pre class="lang1">false
@@ -211,20 +217,25 @@ NaN
 </pre>
                 </td>
             </tr>
-            <tr>
+            <tr class="row-basics">
                 <td>
-                     type check
+                    type check
                 </td>
                 <td>
-                    <pre class="lang1">obj.class</pre>
+                    <pre class="lang1">obj.class
+</pre>
                 </td>
                 <td>
-                    <pre class="lang2">typeof obj</pre>
+                    <pre class="lang2">typeof obj
+obj.constructor.name  // more precise than typeof
+obj instanceof Type   // returns a boolean
+Object.prototype.toString.call(obj)  // '[object Type]'
+</pre>
                 </td>
             </tr>
-            <tr>
+            <tr class="row-basics">
                 <td>
-                     remove white spaces
+                    remove white spaces
                 </td>
                 <td>
                     <pre class="lang1">str.strip</pre>
@@ -233,9 +244,9 @@ NaN
                     <pre class="lang2">str.trim();</pre>
                 </td>
             </tr>
-            <tr>
+            <tr class="row-basics">
                 <td>
-                     string caps
+                    string caps
                 </td>
                 <td>
                     <pre class="lang1">str.upcase
@@ -249,9 +260,9 @@ str.toLowerCase();
 </pre>
                 </td>
             </tr>
-            <tr>
+            <tr class="row-basics">
                 <td>
-                     string index
+                    string index
                 </td>
                 <td>
                     <pre class="lang1">str[i]
@@ -263,9 +274,9 @@ str.charAt(i);
 </pre>
                 </td>
             </tr>
-            <tr>
+            <tr class="row-basics">
                 <td>
-                     string last char
+                    string last char
                 </td>
                 <td>
                     <pre class="lang1">str[-1]</pre>
@@ -276,9 +287,9 @@ str.substr(-1);
 </pre>
                 </td>
             </tr>
-            <tr>
+            <tr class="row-basics">
                 <td>
-                     regex match
+                    regex match
                 </td>
                 <td>
                     <pre class="lang1">str.match(regexp) # returns a MatchData
@@ -290,9 +301,9 @@ pattern.exec(text);
 </pre>
                 </td>
             </tr>
-            <tr>
+            <tr class="row-basics">
                 <td>
-                     array crud
+                    array crud
                 </td>
                 <td>
                     <pre class="lang1">array.push(obj)
@@ -307,9 +318,9 @@ array.splice(3, 1);
 </pre>
                 </td>
             </tr>
-            <tr>
+            <tr class="row-basics">
                 <td>
-                     first n elements
+                    first n elements
                 </td>
                 <td>
                     <pre class="lang1">objs.first(n)
@@ -326,7 +337,7 @@ array.length = 3; // array is now [1, 2, 3]
                 </td>
             </tr>
             <!-- Whatever is here will appear at the top -->
-            <tr>
+            <tr class="row-functions">
                 <td>
                     defining funtions
                 </td>
@@ -343,7 +354,7 @@ end
 </pre>
                 </td>
             </tr>
-            <tr>
+            <tr class="row-functions">
                 <td>
                     short functions (arrow lambda proc)
                 </td>
@@ -360,7 +371,7 @@ const square = (x, y) => { x * y }
 </pre>
                 </td>
             </tr>
-            <tr>
+            <tr class="row-functions">
                 <td>
                     switch case
                 </td>
@@ -389,7 +400,7 @@ end
 </pre>
                 </td>
             </tr>
-            <tr>
+            <tr class="row-functions">
                 <td>
                     if else
                 </td>
@@ -414,7 +425,7 @@ end
 </pre>
                 </td>
             </tr>
-            <tr>
+            <tr class="row-functions">
                 <td>
                     loop each
                 </td>
@@ -429,7 +440,7 @@ items.forEach((x, index) => items[index] = x * 2 );
 </pre>
                 </td>
             </tr>
-            <tr>
+            <tr class="row-functions">
                 <td>
                     select filter
                 </td>
@@ -442,7 +453,7 @@ array.reject {|x| x.odd? }
                     <pre class="lang2">array.filter(x => x % 2 == 0);</pre>
                 </td>
             </tr>
-            <tr>
+            <tr class="row-functions">
                 <td>
                     reduce
                 </td>
@@ -455,7 +466,7 @@ array.reduce(0) {|sum, curr| sum + curr}
                     <pre class="lang2">array.reduce((sum, curr) => sum + curr);</pre>
                 </td>
             </tr>
-            <tr>
+            <tr class="row-functions">
                 <td>
                     hash object
                 </td>
@@ -475,7 +486,7 @@ obj.set(key, value);
 </pre>
                 </td>
             </tr>
-            <tr>
+            <tr class="row-functions">
                 <td>
                     hash map iterator
                 </td>
@@ -488,7 +499,7 @@ obj.set(key, value);
 </pre>
                 </td>
             </tr>
-            <tr>
+            <tr class="row-functions">
                 <td>
                     class structure
                 </td>
@@ -521,7 +532,7 @@ end
 </pre>
                 </td>
             </tr>
-            <tr>
+            <tr class="row-functions">
                 <td>
                     class example
                 </td>
@@ -574,7 +585,7 @@ typeof iff    // 'object'
 </pre>
                 </td>
             </tr>
-            <tr>
+            <tr class="row-functions">
                 <td>
                     subclass inheritance
                 </td>
