@@ -1,0 +1,115 @@
+targeting: # key
+  code: |
+    document.getElementById('someId');
+    document.getElementsByClassName('someClass');
+    document.getElementsByTagName('ul');
+    document.querySelector('#someId div .someclass');
+    document.querySelectorAll('.someClass');
+  notes: |
+    getElementById returns one target
+    querySelector returns the first target
+    getElementsByClassName/TagName returns an array
+    querySelectorAll returns a collection list
+window:
+  code: |
+    window.onload = function() {
+      console.log('window loaded');
+    };
+
+    window.reload();
+    alert('msg');
+    confirm('msg');
+    prompt();
+  notes: |
+
+event:
+  code: |
+    element.onclick
+
+
+  notes: |
+
+event listener:
+  code: |
+    element.addEventListener('DOMContentLoaded', handler);
+                             'click'
+                             'focus'
+                             'blur'
+                             'reset'
+                             'submit'
+                             'keyup'
+                             'keydown'
+                             'keypress'
+                             'DOMContentLoaded'
+    element.removeEventListener('click', handler);
+  notes: |
+    const handler = (event) => { // handle event }
+
+    event types: mouse, keyboard, form, view, clipboard, drag & drop, etc.
+    https://developer.mozilla.org/en-US/docs/Web/Events
+element:
+  code: |
+    document.createElement('tagName');
+    document.createTextNode('new text content');
+  notes: |
+parent child nodes:
+  code: |
+    element.childNodes;
+    element.parentNodes;
+  notes: |
+
+add element:
+  code: |
+    parent.appendChild(childNode)
+    parent.insertBefore(childBefore, childAfter)
+  notes: |
+
+add html:
+  code: |
+
+    element.insertAdjacentHTML('beforebegin', html_str);
+                               'afterbegin'
+                               'beforeend'
+                               'afterend'
+
+  notes: |
+   'beforeend'/'afterend' requires a parent tag
+class list:
+  code: |
+    element.classList.add('newClass');
+    element.classList.remove('existingClass');
+    element.classList.toggle('anotherName');
+    element.classList.contains('foo');
+  notes: |
+    classList.contains returns a boolean
+
+timer:
+  code: |
+    const timer = window.setTimeout(function, 5000);
+    window.clearTimeout(timer);
+
+    const intervalHandler = window.setInterval(function, 5000);
+    window.clearInterval(intervalHandle);
+  notes: |
+    setInterval repeats function every 5000ms
+fetch:
+  code: |
+    ------ GET ------
+    fetch(url) // takes in 1 para
+      .then(response => response.json())
+      .then((data) => {
+        // check data content and do something with data
+      });
+
+    ------ POST ------
+    fetch(url, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name: "dataName", content: "dataContent" }) // body contains info to send
+      }) // takes in 2 para
+      .then(response => response.json())
+      .then((data) => {
+        // check data content and do something with data
+      });
+
+  notes:

@@ -1,31 +1,32 @@
 table {
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto;
   box-shadow: 0 20px 20px -22px $dark-sand;
 }
 
 h3 {
-  margin: 30px auto;
+  margin-top: 30px;
   color: #333;
   opacity: 0.9;
 }
 
-th {
+ul {
+  list-style: none;
+  padding: 10px;
+}
+
+.table-header {
   border-bottom: 1px solid #755f34;
 }
 
-tr {
+.row-basics, .row-functions {
   border-bottom: 1px dotted #a57d2c;
 }
 
-pre {
-  background-color: rgba(250, 250, 250, 0.7);
+.lang1, .lang2 {
+  background-color: rgba(250, 250, 250, 0.6);
   margin: 10px;
   padding: 5px 10px;
   border: none;
   font-size: 12px;
 }
-
-// pre.lang1 {
-//   background-color: $red;
-// }

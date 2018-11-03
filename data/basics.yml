@@ -94,8 +94,13 @@
     NaN
     ''
 - keyword: type check
-  ruby: obj.class
-  js: typeof obj
+  ruby: |
+    obj.class
+  js: |
+    typeof obj
+    obj.constructor.name  // more precise than typeof
+    obj instanceof Type   // returns a boolean
+    Object.prototype.toString.call(obj)  // '[object Type]'
 
 - keyword: remove white spaces
   ruby: str.strip

@@ -1,0 +1,27 @@
+.dom-key {
+  border-bottom: 1px dashed $gray;
+  margin: 10px 0;
+}
+
+h5 {
+  margin-top: 0;
+}
+
+.col-code, .col-notes {
+  margin-bottom: 10px;
+}
+
+.col-code {
+  border-left: 1px dashed $gray;
+}
+
+.code, .notes {
+  padding: 0;
+  background: transparent;
+  border: none;
+}
+
+.notes {
+  color: rgba(50, 50, 50, 0.8);
+  opacity: 0.8;
+}
