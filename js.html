@@ -6,9 +6,10 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="A quick reference for syntax differences between ? programming languages">
+    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
     <!-- Use the title from a page's frontmatter if it has one -->
-    <title>JavaScript DOM</title>
-    <link href="stylesheets/site-3bf68609.css" rel="stylesheet" />
+    <title>JavaScript</title>
+    <link href="stylesheets/site-b67a590e.css" rel="stylesheet" />
     <script src="javascripts/site-5e152b99.js"></script>
   </head>
   <body style="background-color: #fbc547;">
@@ -18,7 +19,7 @@
             <li><a href="https://nlogx.github.io/profile/">
                 <i class="fa fa-cloud"></i></a></li>
             <div>
-            <a href="/"><img class="logo" src="images/ruby-e08c1646.png" alt="Ruby"></img></a>
+            <a href="/languages"><img class="logo" src="images/ruby-e08c1646.png" alt="Ruby"></img></a>
             </div>
             <li><a href="#"><i class="fa fa-globe"></i></a></li>
 
@@ -28,30 +29,37 @@
 
     <div class="container">
     <div class="container">
-        <h3>JavaScript DOM</h3>
+        <h3>JavaScript</h3>
+        <ul class=list-links">
+            <li><a href="#dom-table">DOM | Document Object Model</a></li>
+            <li><a href="#bom-table">BOM | Browser Object Model</a></li>
+            <li><a href="#ajax-table">AJAX | Asynchronous JavaScript And XML</a></li>
+        </ul>
         <br>
     </div>
-    <div class="container dom-table">
+    <div class="container">
+      <h5>DOM</h5>
         <div class="table-header">
             <div class="row">
-                <div class="header-keywords col-xs-12 col-md-2">
+                <div class="header-keywords col-xs-12 col-md-2 col-lg-1">
                     <h5><strong>Keywords</strong></h5>
                 </div>
                 <div class="header-code col-xs-12 col-sm-7 col-md-6">
                     <h5><strong>Code</strong></h5>
                 </div>
-                <div class="header-notes col-xs-12 col-sm-5 col-md-4">
+                <div class="header-notes col-xs-12 col-sm-5 col-md-4 col-lg-5">
                     <h5><strong>Notes</strong></h5>
                 </div>
             </div>
         </div>
-        <div class="dom-content">
+        <div id="dom-table">
+
             <div class="dom-key">
                 <div class="row">
                     <div class="col-xs-12 col-md-2 col-lg-1">
                         <h5>targeting</h5><br>
                     </div>
-                    <div class="col-code col-xs-12 col-sm-7 col-md-6 col-lg-6">
+                    <div class="col-code col-xs-12 col-sm-7 col-md-6">
                         <pre class="code">document.getElementById('someId');
 document.getElementsByClassName('someClass');
 document.getElementsByTagName('ul');
@@ -71,87 +79,9 @@ querySelectorAll returns a collection list
             <div class="dom-key">
                 <div class="row">
                     <div class="col-xs-12 col-md-2 col-lg-1">
-                        <h5>window</h5><br>
-                    </div>
-                    <div class="col-code col-xs-12 col-sm-7 col-md-6 col-lg-6">
-                        <pre class="code">window.onload = function() {
-  console.log('window loaded');
-};
-
-window.reload();
-alert('msg');
-confirm('msg');
-prompt();
-</pre>
-                    </div>
-                    <div class="col-notes col-xs-12 col-sm-5 col-md-4 col-lg-5">
-                        <pre class="notes"><em></em></pre>
-                    </div>
-                </div>
-            </div>
-            <div class="dom-key">
-                <div class="row">
-                    <div class="col-xs-12 col-md-2 col-lg-1">
-                        <h5>event</h5><br>
-                    </div>
-                    <div class="col-code col-xs-12 col-sm-7 col-md-6 col-lg-6">
-                        <pre class="code">element.onclick
-</pre>
-                    </div>
-                    <div class="col-notes col-xs-12 col-sm-5 col-md-4 col-lg-5">
-                        <pre class="notes"><em></em></pre>
-                    </div>
-                </div>
-            </div>
-            <div class="dom-key">
-                <div class="row">
-                    <div class="col-xs-12 col-md-2 col-lg-1">
-                        <h5>event listener</h5><br>
-                    </div>
-                    <div class="col-code col-xs-12 col-sm-7 col-md-6 col-lg-6">
-                        <pre class="code">element.addEventListener('DOMContentLoaded', handler);
-                         'click'
-                         'focus'
-                         'blur'
-                         'reset'
-                         'submit'
-                         'keyup'
-                         'keydown'
-                         'keypress'
-                         'DOMContentLoaded'
-element.removeEventListener('click', handler);
-</pre>
-                    </div>
-                    <div class="col-notes col-xs-12 col-sm-5 col-md-4 col-lg-5">
-                        <pre class="notes"><em>const handler = (event) => { // handle event }
-
-event types: mouse, keyboard, form, view, clipboard, drag & drop, etc.
-https://developer.mozilla.org/en-US/docs/Web/Events
-</em></pre>
-                    </div>
-                </div>
-            </div>
-            <div class="dom-key">
-                <div class="row">
-                    <div class="col-xs-12 col-md-2 col-lg-1">
-                        <h5>element</h5><br>
-                    </div>
-                    <div class="col-code col-xs-12 col-sm-7 col-md-6 col-lg-6">
-                        <pre class="code">document.createElement('tagName');
-document.createTextNode('new text content');
-</pre>
-                    </div>
-                    <div class="col-notes col-xs-12 col-sm-5 col-md-4 col-lg-5">
-                        <pre class="notes"><em></em></pre>
-                    </div>
-                </div>
-            </div>
-            <div class="dom-key">
-                <div class="row">
-                    <div class="col-xs-12 col-md-2 col-lg-1">
                         <h5>parent child nodes</h5><br>
                     </div>
-                    <div class="col-code col-xs-12 col-sm-7 col-md-6 col-lg-6">
+                    <div class="col-code col-xs-12 col-sm-7 col-md-6">
                         <pre class="code">element.childNodes;
 element.parentNodes;
 </pre>
@@ -166,7 +96,7 @@ element.parentNodes;
                     <div class="col-xs-12 col-md-2 col-lg-1">
                         <h5>add element</h5><br>
                     </div>
-                    <div class="col-code col-xs-12 col-sm-7 col-md-6 col-lg-6">
+                    <div class="col-code col-xs-12 col-sm-7 col-md-6">
                         <pre class="code">parent.appendChild(childNode)
 parent.insertBefore(childBefore, childAfter)
 </pre>
@@ -181,7 +111,7 @@ parent.insertBefore(childBefore, childAfter)
                     <div class="col-xs-12 col-md-2 col-lg-1">
                         <h5>add html</h5><br>
                     </div>
-                    <div class="col-code col-xs-12 col-sm-7 col-md-6 col-lg-6">
+                    <div class="col-code col-xs-12 col-sm-7 col-md-6">
                         <pre class="code">
 element.insertAdjacentHTML('beforebegin', html_str);
                            'afterbegin'
@@ -200,7 +130,7 @@ element.insertAdjacentHTML('beforebegin', html_str);
                     <div class="col-xs-12 col-md-2 col-lg-1">
                         <h5>class list</h5><br>
                     </div>
-                    <div class="col-code col-xs-12 col-sm-7 col-md-6 col-lg-6">
+                    <div class="col-code col-xs-12 col-sm-7 col-md-6">
                         <pre class="code">element.classList.add('newClass');
 element.classList.remove('existingClass');
 element.classList.toggle('anotherName');
@@ -216,9 +146,164 @@ element.classList.contains('foo');
             <div class="dom-key">
                 <div class="row">
                     <div class="col-xs-12 col-md-2 col-lg-1">
+                        <h5>event listener</h5><br>
+                    </div>
+                    <div class="col-code col-xs-12 col-sm-7 col-md-6">
+                        <pre class="code">element.addEventListener('DOMContentLoaded', handler);
+element.removeEventListener('click', handler);
+</pre>
+                    </div>
+                    <div class="col-notes col-xs-12 col-sm-5 col-md-4 col-lg-5">
+                        <pre class="notes"><em>const handler = (event) => { // handle event }
+
+event types: mouse, keyboard, form, view, clipboard, drag & drop, etc.
+https://developer.mozilla.org/en-US/docs/Web/Events
+</em></pre>
+                    </div>
+                </div>
+            </div>
+            <div class="dom-key">
+                <div class="row">
+                    <div class="col-xs-12 col-md-2 col-lg-1">
+                        <h5>creating element</h5><br>
+                    </div>
+                    <div class="col-code col-xs-12 col-sm-7 col-md-6">
+                        <pre class="code">document.createElement('tagName');
+document.createTextNode('new text content');
+</pre>
+                    </div>
+                    <div class="col-notes col-xs-12 col-sm-5 col-md-4 col-lg-5">
+                        <pre class="notes"><em>const event = document.createEvent('MouseEvent');
+</em></pre>
+                    </div>
+                </div>
+            </div>
+            <div class="dom-key">
+                <div class="row">
+                    <div class="col-xs-12 col-md-2 col-lg-1">
+                        <h5>creating events</h5><br>
+                    </div>
+                    <div class="col-code col-xs-12 col-sm-7 col-md-6">
+                        <pre class="code">const event = new Event('click');
+const event = new CustomEvent('click', { bubbles: true, detail: //... });
+                              'focus'
+                              'blur'
+                              'reset'
+                              'submit'
+                              'keyup'
+                              'keydown'
+                              'keypress'
+                              'DOMContentLoaded'
+
+element.addEventListener('click', handler, false);
+element.dispatchEvent(event);
+</pre>
+                    </div>
+                    <div class="col-notes col-xs-12 col-sm-5 col-md-4 col-lg-5">
+                        <pre class="notes"><em>// older approach:
+const event = document.createEvent('MouseEvent');
+                                   'AnimationEvent'
+                                   'ClipboardEvent'
+                                   'DragEvent'
+                                   'FocusEvent'
+                                   'HashChangeEvent'
+                                   'InputEvent'
+                                   'KeyboardEvent'
+                                   'PageTransitionEvent'
+                                   'PopStateEvent'
+                                   'ProgressEvent'
+                                   'StorageEvent'
+                                   'TouchEvent'
+                                   'TransitionEvent'
+                                   'UiEvent'
+                                   'WheelEvent'
+event.initEvent('click', true, false);
+              // type, bubbles, cancelable
+</em></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="bom-table">
+
+            <div class="dom-key">
+                <div class="row">
+                    <div class="col-xs-12 col-md-2 col-lg-1">
+                        <h5>window</h5><br>
+                    </div>
+                    <div class="col-code col-xs-12 col-sm-7 col-md-6">
+                        <pre class="code">window.open();
+window.close();
+window.onload = function() {
+  console.log('window loaded');
+};
+</pre>
+                    </div>
+                    <div class="col-notes col-xs-12 col-sm-5 col-md-4 col-lg-5">
+                        <pre class="notes"><em>location.reload();
+location.assign(url);
+location.hostname;
+navigator.language;
+</em></pre>
+                    </div>
+                </div>
+            </div>
+            <div class="dom-key">
+                <div class="row">
+                    <div class="col-xs-12 col-md-2 col-lg-1">
+                        <h5>properties</h5><br>
+                    </div>
+                    <div class="col-code col-xs-12 col-sm-7 col-md-6">
+                        <pre class="code">window.innerHeight
+window.innerWidth
+</pre>
+                    </div>
+                    <div class="col-notes col-xs-12 col-sm-5 col-md-4 col-lg-5">
+                        <pre class="notes"><em>returns the size in pixels
+</em></pre>
+                    </div>
+                </div>
+            </div>
+            <div class="dom-key">
+                <div class="row">
+                    <div class="col-xs-12 col-md-2 col-lg-1">
+                        <h5>history</h5><br>
+                    </div>
+                    <div class="col-code col-xs-12 col-sm-7 col-md-6">
+                        <pre class="code">history.back()
+history.forward()
+</pre>
+                    </div>
+                    <div class="col-notes col-xs-12 col-sm-5 col-md-4 col-lg-5">
+                        <pre class="notes"><em>same as clicking back or forward in the browser
+</em></pre>
+                    </div>
+                </div>
+            </div>
+            <div class="dom-key">
+                <div class="row">
+                    <div class="col-xs-12 col-md-2 col-lg-1">
+                        <h5>popup</h5><br>
+                    </div>
+                    <div class="col-code col-xs-12 col-sm-7 col-md-6">
+                        <pre class="code">alert('alert msg');
+confirm('info to notify');
+prompt('instruction for input', 'default placeholder');
+</pre>
+                    </div>
+                    <div class="col-notes col-xs-12 col-sm-5 col-md-4 col-lg-5">
+                        <pre class="notes"><em>confirm returns a boolean
+prompt returns input string or null
+</em></pre>
+                    </div>
+                </div>
+            </div>
+            <div class="dom-key">
+                <div class="row">
+                    <div class="col-xs-12 col-md-2 col-lg-1">
                         <h5>timer</h5><br>
                     </div>
-                    <div class="col-code col-xs-12 col-sm-7 col-md-6 col-lg-6">
+                    <div class="col-code col-xs-12 col-sm-7 col-md-6">
                         <pre class="code">const timer = window.setTimeout(function, 5000);
 window.clearTimeout(timer);
 
@@ -232,12 +317,16 @@ window.clearInterval(intervalHandle);
                     </div>
                 </div>
             </div>
+        </div>
+
+        <div id="ajax-table">
+
             <div class="dom-key">
                 <div class="row">
                     <div class="col-xs-12 col-md-2 col-lg-1">
                         <h5>fetch</h5><br>
                     </div>
-                    <div class="col-code col-xs-12 col-sm-7 col-md-6 col-lg-6">
+                    <div class="col-code col-xs-12 col-sm-7 col-md-6">
                         <pre class="code">------ GET ------
 fetch(url) // takes in 1 para
   .then(response => response.json())

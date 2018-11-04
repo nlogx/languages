@@ -6,9 +6,10 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="A quick reference for syntax differences between ? programming languages">
+    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
     <!-- Use the title from a page's frontmatter if it has one -->
     <title>Ruby vs. JavaScript</title>
-    <link href="stylesheets/site-3bf68609.css" rel="stylesheet" />
+    <link href="stylesheets/site-b67a590e.css" rel="stylesheet" />
     <script src="javascripts/site-5e152b99.js"></script>
   </head>
   <body style="background-color: #fbc547;">
@@ -18,7 +19,7 @@
             <li><a href="https://nlogx.github.io/profile/">
                 <i class="fa fa-cloud"></i></a></li>
             <div>
-            <a href="/"><img class="logo" src="images/ruby-e08c1646.png" alt="Ruby"></img></a>
+            <a href="/languages"><img class="logo" src="images/ruby-e08c1646.png" alt="Ruby"></img></a>
             </div>
             <li><a href="#"><i class="fa fa-globe"></i></a></li>
 
@@ -31,8 +32,8 @@
         <caption>
             <h3>Quick Syntax</h3>
             <ul class=list-links">
-                <li><a href="dom.html">Javascript DOM</a></li>
-                <li><a href="#">HTML tags</a></li>
+                <li><a href="js.html">Javascript</a></li>
+                <!-- <li><a href="#">HTML tags</a></li> -->
             </ul>
         </caption>
         <thead>
@@ -55,6 +56,54 @@ ruby file.rb
                 <td>
                     <pre class="lang2">node // js playground
 node file.js
+</pre>
+                </td>
+            </tr>
+            <tr class="row-basics">
+                <td>
+                    control flow execution
+                </td>
+                <td>
+                    <pre class="lang1">- synchronous, one command is being executed at a time
+</pre>
+                </td>
+                <td>
+                    <pre class="lang2">- single threaded with synchronous execution model
+- asynchronous behavior user interaction, AJAX requests, timers
+</pre>
+                </td>
+            </tr>
+            <tr class="row-basics">
+                <td>
+                    import export
+                </td>
+                <td>
+                    <pre class="lang1"># file level
+require 'module'
+require_relative 'relative_path/file'
+load 'module.rb'
+
+# language level
+include Module  # adds methods as instance methods
+extend Module   # adds methods as class methods
+</pre>
+                </td>
+                <td>
+                    <pre class="lang2">// export
+export { name1, name2, ..., nameN };
+export let name1, name2, ..., nameN;
+
+export default expression;
+export default function () { ... }; // also class
+
+export * from ...;
+export { default } from ...;
+
+// import
+import defaultExport from "module-name";
+import * as name from "module-name";
+import { export as alias } from "module-name";
+import { export1 , export2 } from "module-name";
 </pre>
                 </td>
             </tr>
@@ -108,17 +157,6 @@ const constName = "value";
             </tr>
             <tr class="row-basics">
                 <td>
-                    string interpolation
-                </td>
-                <td>
-                    <pre class="lang1">puts "\"#{var_name}\""</pre>
-                </td>
-                <td>
-                    <pre class="lang2">console.log(`${varName}`);</pre>
-                </td>
-            </tr>
-            <tr class="row-basics">
-                <td>
                     date time
                 </td>
                 <td>
@@ -141,6 +179,35 @@ d.getHours();
 d.getMinutes();
 d.getSeconds();
 </pre>
+                </td>
+            </tr>
+            <tr class="row-basics">
+                <td>
+                    falsy values
+                </td>
+                <td>
+                    <pre class="lang1">false
+nil
+</pre>
+                </td>
+                <td>
+                    <pre class="lang2">false
+null
+undefined
+NaN
+''
+</pre>
+                </td>
+            </tr>
+            <tr class="row-basics">
+                <td>
+                    string interpolation
+                </td>
+                <td>
+                    <pre class="lang1">puts "\"#{var_name}\""</pre>
+                </td>
+                <td>
+                    <pre class="lang2">console.log(`${varName}`);</pre>
                 </td>
             </tr>
             <tr class="row-basics">
@@ -184,7 +251,7 @@ d.getSeconds();
             </tr>
             <tr class="row-basics">
                 <td>
-                    type conversion
+                    parsing
                 </td>
                 <td>
                     <pre class="lang1">str.to_i
@@ -201,24 +268,6 @@ int.toString();
             </tr>
             <tr class="row-basics">
                 <td>
-                    falsy values
-                </td>
-                <td>
-                    <pre class="lang1">false
-nil
-</pre>
-                </td>
-                <td>
-                    <pre class="lang2">false
-null
-undefined
-NaN
-''
-</pre>
-                </td>
-            </tr>
-            <tr class="row-basics">
-                <td>
                     type check
                 </td>
                 <td>
@@ -230,6 +279,22 @@ NaN
 obj.constructor.name  // more precise than typeof
 obj instanceof Type   // returns a boolean
 Object.prototype.toString.call(obj)  // '[object Type]'
+</pre>
+                </td>
+            </tr>
+            <tr class="row-basics">
+                <td>
+                    incrementing
+                </td>
+                <td>
+                    <pre class="lang1">123.next    # 124
+"abc".next  # "abd"
+</pre>
+                </td>
+                <td>
+                    <pre class="lang2">i = 123
+i++
+i--
 </pre>
                 </td>
             </tr>
@@ -402,7 +467,7 @@ end
             </tr>
             <tr class="row-functions">
                 <td>
-                    if else
+                    if else conditional
                 </td>
                 <td>
                     <pre class="lang1">if condition_1
@@ -411,6 +476,9 @@ elsif condition_2
   "condition_2"
 else
   "other"
+end
+
+unless condition   # if not
 end
 </pre>
                 </td>
@@ -427,10 +495,88 @@ end
             </tr>
             <tr class="row-functions">
                 <td>
+                    key statements
+                </td>
+                <td>
+                    <pre class="lang1">raise
+fail
+break
+next
+redo
+rescue
+retry
+undef
+</pre>
+                </td>
+                <td>
+                    <pre class="lang2"></pre>
+                </td>
+            </tr>
+            <tr class="row-functions">
+                <td>
+                    begin end flow control
+                </td>
+                <td>
+                    <pre class="lang1">END { # runs last
+   puts "Terminating Ruby Program"
+}
+BEGIN { # runs first
+   puts "Initializing Ruby Program"
+}
+</pre>
+                </td>
+                <td>
+                    <pre class="lang2"></pre>
+                </td>
+            </tr>
+            <tr class="row-functions">
+                <td>
+                    while loop
+                </td>
+                <td>
+                    <pre class="lang1">while condition [do]
+   # ...
+end
+
+# while not
+until conditional [do]
+   # ...
+end
+
+# one line
+{ ... } while condition
+
+# block executes at least once
+begin
+  { ... }
+end while condition
+</pre>
+                </td>
+                <td>
+                    <pre class="lang2"></pre>
+                </td>
+            </tr>
+            <tr class="row-functions">
+                <td>
+                    for loop
+                </td>
+                <td>
+                    <pre class="lang1">for i in 0..5
+   # ...
+end
+</pre>
+                </td>
+                <td>
+                    <pre class="lang2"></pre>
+                </td>
+            </tr>
+            <tr class="row-functions">
+                <td>
                     loop each
                 </td>
                 <td>
-                    <pre class="lang1">items.each { |item| # do something }
+                    <pre class="lang1">(1..5).each { ... }
+items.each { |item| # do something }
 items.each_with_index { |item, i| items[i] }
 </pre>
                 </td>
