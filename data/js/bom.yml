@@ -1,0 +1,49 @@
+window:
+  code: |
+    window.open();
+    window.close();
+    window.onload = function() {
+      console.log('window loaded');
+    };
+  notes: |
+    location.reload();
+    location.assign(url);
+    location.hostname;
+    navigator.language;
+properties:
+  code: |
+    window.innerHeight
+    window.innerWidth
+  notes: |
+    returns the size in pixels
+
+history:
+  code: |
+    history.back()
+    history.forward()
+  notes: |
+    same as clicking back or forward in the browser
+popup:
+  code: |
+    alert('alert msg');
+    confirm('info to notify');
+    prompt('instruction for input', 'default placeholder');
+  notes: |
+    confirm returns a boolean
+    prompt returns input string or null
+timer:
+  code: |
+    const timer = window.setTimeout(function, 5000);
+    window.clearTimeout(timer);
+
+    const intervalHandler = window.setInterval(function, 5000);
+    window.clearInterval(intervalHandle);
+  notes: |
+    setInterval repeats function every 5000ms
+# cookies:
+#   code: |
+#     document.cookie = "username=John Doe;
+#                        expires=Thu, 18 Dec 2013 12:00:00 UTC;
+#                        path=/";
+
+#   notes: |

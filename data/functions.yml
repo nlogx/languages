@@ -38,7 +38,7 @@
       default:
         return 0;
     }
-- keyword: if else
+- keyword: if else conditional
   ruby: |
     if condition_1
       "condition_1"
@@ -46,6 +46,9 @@
       "condition_2"
     else
       "other"
+    end
+
+    unless condition   # if not
     end
   js: |
     if (condition_1) {
@@ -55,9 +58,54 @@
     } else {
       return "other";
     }
+- keyword: key statements
+  ruby: |
+    raise
+    fail
+    break
+    next
+    redo
+    rescue
+    retry
+    undef
+  js: |
+- keyword: begin end flow control
+  ruby: |
+    END { # runs last
+       puts "Terminating Ruby Program"
+    }
+    BEGIN { # runs first
+       puts "Initializing Ruby Program"
+    }
+  js: |
 
+- keyword: while loop
+  ruby: |
+    while condition [do]
+       # ...
+    end
+
+    # while not
+    until conditional [do]
+       # ...
+    end
+
+    # one line
+    { ... } while condition
+
+    # block executes at least once
+    begin
+      { ... }
+    end while condition
+  js: |
+- keyword: for loop
+  ruby: |
+    for i in 0..5
+       # ...
+    end
 - keyword: loop each
   ruby: |
+    (1..5).each { ... }
     items.each { |item| # do something }
     items.each_with_index { |item, i| items[i] }
   js: |

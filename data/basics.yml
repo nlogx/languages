@@ -5,6 +5,38 @@
   js: |
     node // js playground
     node file.js
+- keyword: control flow execution
+  ruby: |
+    - synchronous, one command is being executed at a time
+  js: |
+    - single threaded with synchronous execution model
+    - asynchronous behavior user interaction, AJAX requests, timers
+- keyword: import export
+  ruby: |
+    # file level
+    require 'module'
+    require_relative 'relative_path/file'
+    load 'module.rb'
+
+    # language level
+    include Module  # adds methods as instance methods
+    extend Module   # adds methods as class methods
+  js: |
+    // export
+    export { name1, name2, ..., nameN };
+    export let name1, name2, ..., nameN;
+
+    export default expression;
+    export default function () { ... }; // also class
+
+    export * from ...;
+    export { default } from ...;
+
+    // import
+    import defaultExport from "module-name";
+    import * as name from "module-name";
+    import { export as alias } from "module-name";
+    import { export1 , export2 } from "module-name";
 - keyword: naming convention
   ruby: |
     snake_case            # local variables, methods
@@ -29,9 +61,7 @@
     let var; // undefined
     let varName = "value";
     const constName = "value";
-- keyword: string interpolation
-  ruby: puts "\"#{var_name}\""
-  js: console.log(`${varName}`);
+
 ######### DATE TIME ########
 - keyword: date time
   ruby: |
@@ -51,6 +81,20 @@
     d.getHours();
     d.getMinutes();
     d.getSeconds();
+- keyword: falsy values
+  ruby: |
+    false
+    nil
+  js: |
+    false
+    null
+    undefined
+    NaN
+    ''
+- keyword: string interpolation
+  ruby: puts "\"#{var_name}\""
+  js: console.log(`${varName}`);
+
 - keyword: string concatenation
   ruby: |
     "1" + "10"      # "110"
@@ -74,7 +118,7 @@
   js: |
     123 == "123"   // true
     123 === "123"  // false
-- keyword: type conversion
+- keyword: parsing
   ruby: |
     str.to_i
     num.to_f
@@ -83,16 +127,6 @@
     parseInt(str, 10);
     parseFloat(num);
     int.toString();
-- keyword: falsy values
-  ruby: |
-    false
-    nil
-  js: |
-    false
-    null
-    undefined
-    NaN
-    ''
 - keyword: type check
   ruby: |
     obj.class
@@ -101,7 +135,14 @@
     obj.constructor.name  // more precise than typeof
     obj instanceof Type   // returns a boolean
     Object.prototype.toString.call(obj)  // '[object Type]'
-
+- keyword: incrementing
+  ruby: |
+    123.next    # 124
+    "abc".next  # "abd"
+  js: |
+    i = 123
+    i++
+    i--
 - keyword: remove white spaces
   ruby: str.strip
   js: str.trim();

@@ -1,0 +1,94 @@
+targeting: # key
+  code: |
+    document.getElementById('someId');
+    document.getElementsByClassName('someClass');
+    document.getElementsByTagName('ul');
+    document.querySelector('#someId div .someclass');
+    document.querySelectorAll('.someClass');
+  notes: |
+    getElementById returns one target
+    querySelector returns the first target
+    getElementsByClassName/TagName returns an array
+    querySelectorAll returns a collection list
+parent child nodes:
+  code: |
+    element.childNodes;
+    element.parentNodes;
+  notes: |
+
+add element:
+  code: |
+    parent.appendChild(childNode)
+    parent.insertBefore(childBefore, childAfter)
+  notes: |
+
+add html:
+  code: |
+
+    element.insertAdjacentHTML('beforebegin', html_str);
+                               'afterbegin'
+                               'beforeend'
+                               'afterend'
+
+  notes: |
+   'beforeend'/'afterend' requires a parent tag
+class list:
+  code: |
+    element.classList.add('newClass');
+    element.classList.remove('existingClass');
+    element.classList.toggle('anotherName');
+    element.classList.contains('foo');
+  notes: |
+    classList.contains returns a boolean
+event listener:
+  code: |
+    element.addEventListener('DOMContentLoaded', handler);
+    element.removeEventListener('click', handler);
+  notes: |
+    const handler = (event) => { // handle event }
+
+    event types: mouse, keyboard, form, view, clipboard, drag & drop, etc.
+    https://developer.mozilla.org/en-US/docs/Web/Events
+creating element:
+  code: |
+    document.createElement('tagName');
+    document.createTextNode('new text content');
+
+  notes: |
+    const event = document.createEvent('MouseEvent');
+
+creating events:
+  code: |
+    const event = new Event('click');
+    const event = new CustomEvent('click', { bubbles: true, detail: //... });
+                                  'focus'
+                                  'blur'
+                                  'reset'
+                                  'submit'
+                                  'keyup'
+                                  'keydown'
+                                  'keypress'
+                                  'DOMContentLoaded'
+
+    element.addEventListener('click', handler, false);
+    element.dispatchEvent(event);
+  notes: |
+    // older approach:
+    const event = document.createEvent('MouseEvent');
+                                       'AnimationEvent'
+                                       'ClipboardEvent'
+                                       'DragEvent'
+                                       'FocusEvent'
+                                       'HashChangeEvent'
+                                       'InputEvent'
+                                       'KeyboardEvent'
+                                       'PageTransitionEvent'
+                                       'PopStateEvent'
+                                       'ProgressEvent'
+                                       'StorageEvent'
+                                       'TouchEvent'
+                                       'TransitionEvent'
+                                       'UiEvent'
+                                       'WheelEvent'
+    event.initEvent('click', true, false);
+                  // type, bubbles, cancelable

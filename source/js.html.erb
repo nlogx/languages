@@ -1,0 +1,85 @@
+---
+title: JavaScript
+---
+<div class="container">
+    <div class="container">
+        <h3>JavaScript</h3>
+        <ul class=list-links">
+            <li><a href="#dom-table">DOM | Document Object Model</a></li>
+            <li><a href="#bom-table">BOM | Browser Object Model</a></li>
+            <li><a href="#ajax-table">AJAX | Asynchronous JavaScript And XML</a></li>
+        </ul>
+        <br>
+    </div>
+    <div class="container">
+      <h5>DOM</h5>
+        <div class="table-header">
+            <div class="row">
+                <div class="header-keywords col-xs-12 col-md-2 col-lg-1">
+                    <h5><strong>Keywords</strong></h5>
+                </div>
+                <div class="header-code col-xs-12 col-sm-7 col-md-6">
+                    <h5><strong>Code</strong></h5>
+                </div>
+                <div class="header-notes col-xs-12 col-sm-5 col-md-4 col-lg-5">
+                    <h5><strong>Notes</strong></h5>
+                </div>
+            </div>
+        </div>
+        <div id="dom-table">
+
+            <% data.js.dom.each do |key, command| %>
+            <div class="dom-key">
+                <div class="row">
+                    <div class="col-xs-12 col-md-2 col-lg-1">
+                        <h5><%= key %></h5><br>
+                    </div>
+                    <div class="col-code col-xs-12 col-sm-7 col-md-6">
+                        <pre class="code"><%= command.code %></pre>
+                    </div>
+                    <div class="col-notes col-xs-12 col-sm-5 col-md-4 col-lg-5">
+                        <pre class="notes"><em><%= command.notes %></em></pre>
+                    </div>
+                </div>
+            </div>
+            <% end %>
+        </div>
+        <div id="bom-table">
+
+            <% data.js.bom.each do |key, command| %>
+            <div class="dom-key">
+                <div class="row">
+                    <div class="col-xs-12 col-md-2 col-lg-1">
+                        <h5><%= key %></h5><br>
+                    </div>
+                    <div class="col-code col-xs-12 col-sm-7 col-md-6">
+                        <pre class="code"><%= command.code %></pre>
+                    </div>
+                    <div class="col-notes col-xs-12 col-sm-5 col-md-4 col-lg-5">
+                        <pre class="notes"><em><%= command.notes %></em></pre>
+                    </div>
+                </div>
+            </div>
+            <% end %>
+        </div>
+
+        <div id="ajax-table">
+
+            <% data.js.ajax.each do |key, command| %>
+            <div class="dom-key">
+                <div class="row">
+                    <div class="col-xs-12 col-md-2 col-lg-1">
+                        <h5><%= key %></h5><br>
+                    </div>
+                    <div class="col-code col-xs-12 col-sm-7 col-md-6">
+                        <pre class="code"><%= command.code %></pre>
+                    </div>
+                    <div class="col-notes col-xs-12 col-sm-5 col-md-4 col-lg-5">
+                        <pre class="notes"><em><%= command.notes %></em></pre>
+                    </div>
+                </div>
+            </div>
+            <% end %>
+        </div>
+    </div>
+</div>

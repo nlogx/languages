@@ -1,0 +1,21 @@
+fetch:
+  code: |
+    ------ GET ------
+    fetch(url) // takes in 1 para
+      .then(response => response.json())
+      .then((data) => {
+        // check data content and do something with data
+      });
+
+    ------ POST ------
+    fetch(url, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name: "dataName", content: "dataContent" }) // body contains info to send
+      }) // takes in 2 para
+      .then(response => response.json())
+      .then((data) => {
+        // check data content and do something with data
+      });
+
+  notes:
