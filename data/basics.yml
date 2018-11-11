@@ -192,6 +192,34 @@
     array.length = 3; // array is now [1, 2, 3]
 #####################################################################
 
+- keyword: random numbers strings
+  ruby: |
+    rand(10) # rand takes integers only
+    rand(65..90).chr  # returns a random cap letter
+  js:
+- keyword: sample
+  ruby: |
+    ('A'..'Z').to_a.sample(10)  # not random, no repeated values
+  js:
+- keyword: json parse url
+  ruby: |
+    str = open(url).read
+    JSON.parse(str)
+  js:
+
+# - keyword:
+#   ruby:
+#   js:
+
+# - keyword:
+#   ruby:
+#   js:
+# - keyword:
+#   ruby:
+#   js:
+# - keyword:
+#   ruby:
+#   js:
 # - keyword:
 #   ruby:
 #   js:
