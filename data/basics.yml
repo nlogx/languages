@@ -165,6 +165,13 @@
   js: |
     str.slice(-1);
     str.substr(-1);
+- keyword: array index
+  ruby: |
+    array[1]    # returns nil if index out of range
+    array[-1]   # returns last item in list
+  js:
+    array[1]    // returns undefined if index out of range
+    array[-1]   // returns undefined
 - keyword: regex match
   ruby: |
     str.match(regexp) # returns a MatchData

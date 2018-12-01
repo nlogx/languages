@@ -121,7 +121,18 @@
     array.reduce(:+)
     array.reduce(0) {|sum, curr| sum + curr}
   js: array.reduce((sum, curr) => sum + curr);
+- keyword: consecutive n elements, group every n element
+  ruby: |
+    array.each_cons(n).to_a
+    array.every_slice(n)
+  js:
+- keyword:
+  ruby:
+  js:
 
+- keyword:
+  ruby:
+  js:
 #####################################################################
 
 - keyword: hash object
