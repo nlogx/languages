@@ -98,7 +98,7 @@
 - keyword: string concatenation
   ruby: |
     "1" + "10"      # "110"
-    "z" * 3         # "zzz"
+    "z" * 3         # "zzz"  Note: 3 * "z" won't work
     "z" * 3 + ".."  # "zzz.."
     "abc" + 123     # TypeError
     "5" * "3"       # TypeError
@@ -174,9 +174,10 @@
     array[-1]   // returns undefined
 - keyword: regex match
   ruby: |
-    str.match(regexp) # returns a MatchData
+    str.match(regexp) # returns a MatchData or nil
+    str.scan(regexp)  # returns an array of strings
   js: |
-    str.match(regexp) // returns an Array
+    str.match(regexp); // returns an Array
     pattern.exec(text);
 - keyword: array crud
   ruby: |
@@ -197,6 +198,21 @@
     objs.slice(0, n);
     const array = [1,2,3,4,5];
     array.length = 3; // array is now [1, 2, 3]
+- keyword: size count length
+  ruby: |
+    ary.size   # faster than ary.count
+    ary.count
+    ary.length
+  js:
+- keyword: string manipulation width
+  ruby: |
+    ?* * 3           # "*" * 3
+    'c'.center(10)   # '    c    '
+  js:
+- keyword: partition set
+  ruby: |
+    str.partition(substr)   # [head, match, tail]
+  js:
 #####################################################################
 
 - keyword: random numbers strings
@@ -214,9 +230,7 @@
     JSON.parse(str)
   js:
 
-# - keyword:
-#   ruby:
-#   js:
+
 
 # - keyword:
 #   ruby:
@@ -227,12 +241,8 @@
 # - keyword:
 #   ruby:
 #   js:
-# - keyword:
-#   ruby:
-#   js:
-# - keyword:
-#   ruby:
-#   js:
+
+
 
 
 
