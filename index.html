@@ -9,7 +9,7 @@
     <link rel="icon" href="/languages/favicon.ico" type="image/x-icon">
     <!-- Use the title from a page's frontmatter if it has one -->
     <title>Ruby vs. JavaScript</title>
-    <link href="stylesheets/site-b67a590e.css" rel="stylesheet" />
+    <link href="stylesheets/site-d213f920.css" rel="stylesheet" />
     <script src="javascripts/site-5e152b99.js"></script>
   </head>
   <body style="background-color: #fbc547;">
@@ -216,7 +216,7 @@ NaN
                 </td>
                 <td>
                     <pre class="lang1">"1" + "10"      # "110"
-"z" * 3         # "zzz"
+"z" * 3         # "zzz"  Note: 3 * "z" won't work
 "z" * 3 + ".."  # "zzz.."
 "abc" + 123     # TypeError
 "5" * "3"       # TypeError
@@ -354,14 +354,28 @@ str.substr(-1);
             </tr>
             <tr class="row-basics">
                 <td>
-                    regex match
+                    array index
                 </td>
                 <td>
-                    <pre class="lang1">str.match(regexp) # returns a MatchData
+                    <pre class="lang1">array[1]    # returns nil if index out of range
+array[-1]   # returns last item in list
 </pre>
                 </td>
                 <td>
-                    <pre class="lang2">str.match(regexp) // returns an Array
+                    <pre class="lang2">array[1]    // returns undefined if index out of range array[-1]   // returns undefined</pre>
+                </td>
+            </tr>
+            <tr class="row-basics">
+                <td>
+                    regex match
+                </td>
+                <td>
+                    <pre class="lang1">str.match(regexp) # returns a MatchData or nil
+str.scan(regexp)  # returns an array of strings
+</pre>
+                </td>
+                <td>
+                    <pre class="lang2">str.match(regexp); // returns an Array
 pattern.exec(text);
 </pre>
                 </td>
@@ -399,6 +413,83 @@ objs[0, n]
 const array = [1,2,3,4,5];
 array.length = 3; // array is now [1, 2, 3]
 </pre>
+                </td>
+            </tr>
+            <tr class="row-basics">
+                <td>
+                    size count length
+                </td>
+                <td>
+                    <pre class="lang1">ary.size   # faster than ary.count
+ary.count
+ary.length
+</pre>
+                </td>
+                <td>
+                    <pre class="lang2"></pre>
+                </td>
+            </tr>
+            <tr class="row-basics">
+                <td>
+                    string manipulation width
+                </td>
+                <td>
+                    <pre class="lang1">?* * 3           # "*" * 3
+'c'.center(10)   # '    c    '
+</pre>
+                </td>
+                <td>
+                    <pre class="lang2"></pre>
+                </td>
+            </tr>
+            <tr class="row-basics">
+                <td>
+                    partition set
+                </td>
+                <td>
+                    <pre class="lang1">str.partition(substr)   # [head, match, tail]
+</pre>
+                </td>
+                <td>
+                    <pre class="lang2"></pre>
+                </td>
+            </tr>
+            <tr class="row-basics">
+                <td>
+                    random numbers strings
+                </td>
+                <td>
+                    <pre class="lang1">rand(10) # rand takes integers only
+rand(65..90).chr  # returns a random cap letter
+</pre>
+                </td>
+                <td>
+                    <pre class="lang2"></pre>
+                </td>
+            </tr>
+            <tr class="row-basics">
+                <td>
+                    sample
+                </td>
+                <td>
+                    <pre class="lang1">('A'..'Z').to_a.sample(10)  # not random, no repeated values
+</pre>
+                </td>
+                <td>
+                    <pre class="lang2"></pre>
+                </td>
+            </tr>
+            <tr class="row-basics">
+                <td>
+                    json parse url
+                </td>
+                <td>
+                    <pre class="lang1">str = open(url).read
+JSON.parse(str)
+</pre>
+                </td>
+                <td>
+                    <pre class="lang2"></pre>
                 </td>
             </tr>
             <!-- Whatever is here will appear at the top -->
@@ -578,6 +669,8 @@ end
                     <pre class="lang1">(1..5).each { ... }
 items.each { |item| # do something }
 items.each_with_index { |item, i| items[i] }
+n.times  # without block returns a enumerable, stream from 0 to n-1 if used with map
+n.step   # counts to infinity
 </pre>
                 </td>
                 <td>
@@ -610,6 +703,41 @@ array.reduce(0) {|sum, curr| sum + curr}
                 </td>
                 <td>
                     <pre class="lang2">array.reduce((sum, curr) => sum + curr);</pre>
+                </td>
+            </tr>
+            <tr class="row-functions">
+                <td>
+                    consecutive n elements, group every n element
+                </td>
+                <td>
+                    <pre class="lang1">array.each_cons(n).to_a
+array.each_slice(n)
+</pre>
+                </td>
+                <td>
+                    <pre class="lang2"></pre>
+                </td>
+            </tr>
+            <tr class="row-functions">
+                <td>
+                    
+                </td>
+                <td>
+                    <pre class="lang1"></pre>
+                </td>
+                <td>
+                    <pre class="lang2"></pre>
+                </td>
+            </tr>
+            <tr class="row-functions">
+                <td>
+                    
+                </td>
+                <td>
+                    <pre class="lang1"></pre>
+                </td>
+                <td>
+                    <pre class="lang2"></pre>
                 </td>
             </tr>
             <tr class="row-functions">
