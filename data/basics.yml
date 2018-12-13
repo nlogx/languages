@@ -230,11 +230,21 @@
     JSON.parse(str)
   js:
 
+- keyword: sort compare list
+  ruby: |
+    a.sort_by { |x| x[:earnings] }
+    a.sort { |x, y| y[:earnings] <=> x[:earnings] } # greatest to smallest
 
-
-# - keyword:
-#   ruby:
-#   js:
+    # SORT block takes TWO arguments and compares with <=> spaceship
+    # one <=> two returns: 0 if equal
+                           1 if one > two
+                          -1 if one < two
+  js: |
+    items.sort();  // changes original array, compare func optional
+    items.sort(function (a, b) {
+      // ascending value, descending price
+      return a.value - b.value || b.price - a.price;
+    });
 # - keyword:
 #   ruby:
 #   js:

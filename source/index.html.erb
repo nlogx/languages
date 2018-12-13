@@ -20,29 +20,17 @@ title: Ruby vs. JavaScript
         <tbody>
             <% data.basics.each do |c| %>
             <tr class="row-basics">
-                <td>
-                    <%= c.keyword %>
-                </td>
-                <td>
-                    <pre class="lang1"><%= c.ruby %></pre>
-                </td>
-                <td>
-                    <pre class="lang2"><%= c.js %></pre>
-                </td>
+                <td><%= c.keyword %></td>
+                <td><pre class="lang1"><%= c.ruby %></pre></td>
+                <td><pre class="lang2"><%= c.js %></pre></td>
             </tr>
             <% end %>
             <!-- Whatever is here will appear at the top -->
             <% data.functions.each do |f| %>
             <tr class="row-functions">
-                <td>
-                    <%= f.keyword %>
-                </td>
-                <td>
-                    <pre class="lang1"><%= f.ruby %></pre>
-                </td>
-                <td>
-                    <pre class="lang2"><%= f.js %></pre>
-                </td>
+                <td><%= f.keyword %></td>
+                <td><pre class="lang1"><%= f.ruby %></pre></td>
+                <td><pre class="lang2"><%= f.js %></pre></td>
             </tr>
             <% end %>
         </tbody>
