@@ -9,19 +9,19 @@
     <link rel="icon" href="/languages/favicon.ico" type="image/x-icon">
     <!-- Use the title from a page's frontmatter if it has one -->
     <title>Ruby vs. JavaScript</title>
-    <link href="stylesheets/site-d213f920.css" rel="stylesheet" />
+    <link href="stylesheets/site-65ebfc97.css" rel="stylesheet" />
     <script src="javascripts/site-5e152b99.js"></script>
   </head>
   <body style="background-color: #fbc547;">
     <div class="navbar-top">
     <div class="container">
         <ul>
-            <li><a href="https://nlogx.github.io/profile/">
-                <i class="fa fa-cloud"></i></a></li>
+            <li><a href="https://github.com/nlogx">
+                <i class="fa fa-code"></i></a></li>
             <div>
             <a href="/languages"><img class="logo" src="images/ruby-e08c1646.png" alt="Ruby"></img></a>
             </div>
-            <li><a href="#"><i class="fa fa-globe"></i></a></li>
+            <li><a href="mailto: nlogx.3@gmail.com" title="Report mistakes!"><i class="fa fa-at"></i></a></li>
 
         </ul>
     </div>
@@ -45,40 +45,25 @@
         </thead>
         <tbody>
             <tr class="row-basics">
-                <td>
-                    terminal
-                </td>
-                <td>
-                    <pre class="lang1">irb # ruby playground
+                <td>terminal</td>
+                <td><pre class="lang1">irb # ruby playground
 ruby file.rb
-</pre>
-                </td>
-                <td>
-                    <pre class="lang2">node // js playground
+</pre></td>
+                <td><pre class="lang2">node // js playground
 node file.js
-</pre>
-                </td>
+</pre></td>
             </tr>
             <tr class="row-basics">
-                <td>
-                    control flow execution
-                </td>
-                <td>
-                    <pre class="lang1">- synchronous, one command is being executed at a time
-</pre>
-                </td>
-                <td>
-                    <pre class="lang2">- single threaded with synchronous execution model
+                <td>control flow execution</td>
+                <td><pre class="lang1">- synchronous, one command is being executed at a time
+</pre></td>
+                <td><pre class="lang2">- single threaded with synchronous execution model
 - asynchronous behavior user interaction, AJAX requests, timers
-</pre>
-                </td>
+</pre></td>
             </tr>
             <tr class="row-basics">
-                <td>
-                    import export
-                </td>
-                <td>
-                    <pre class="lang1"># file level
+                <td>import export</td>
+                <td><pre class="lang1"># file level
 require 'module'
 require_relative 'relative_path/file'
 load 'module.rb'
@@ -86,10 +71,8 @@ load 'module.rb'
 # language level
 include Module  # adds methods as instance methods
 extend Module   # adds methods as class methods
-</pre>
-                </td>
-                <td>
-                    <pre class="lang2">// export
+</pre></td>
+                <td><pre class="lang2">// export
 export { name1, name2, ..., nameN };
 export let name1, name2, ..., nameN;
 
@@ -104,63 +87,41 @@ import defaultExport from "module-name";
 import * as name from "module-name";
 import { export as alias } from "module-name";
 import { export1 , export2 } from "module-name";
-</pre>
-                </td>
+</pre></td>
             </tr>
             <tr class="row-basics">
-                <td>
-                    naming convention
-                </td>
-                <td>
-                    <pre class="lang1">snake_case            # local variables, methods
+                <td>naming convention</td>
+                <td><pre class="lang1">snake_case            # local variables, methods
 method_suffixes = ? ! # setter, bool, bang
 PascalCase            # classes, modules
-</pre>
-                </td>
-                <td>
-                    <pre class="lang2">lowerCamelCase  // objects, functions, instances
+</pre></td>
+                <td><pre class="lang2">lowerCamelCase  // objects, functions, instances
 PascalCase      // classes, constructors
-</pre>
-                </td>
+</pre></td>
             </tr>
             <tr class="row-basics">
-                <td>
-                    identifiers
-                </td>
-                <td>
-                    <pre class="lang1">:var      # symbol
+                <td>identifiers</td>
+                <td><pre class="lang1">:var      # symbol
 &var      # block
 CONST_VAR # constants
 $var      # global variable
 @@var     # class variable
 @var      # instance variable
-</pre>
-                </td>
-                <td>
-                    <pre class="lang2">_var    // private
-</pre>
-                </td>
+</pre></td>
+                <td><pre class="lang2">_var    // private
+</pre></td>
             </tr>
             <tr class="row-basics">
-                <td>
-                    declaration
-                </td>
-                <td>
-                    <pre class="lang1">var_name = "value"</pre>
-                </td>
-                <td>
-                    <pre class="lang2">let var; // undefined
+                <td>declaration</td>
+                <td><pre class="lang1">var_name = "value"</pre></td>
+                <td><pre class="lang2">let var; // undefined
 let varName = "value";
 const constName = "value";
-</pre>
-                </td>
+</pre></td>
             </tr>
             <tr class="row-basics">
-                <td>
-                    date time
-                </td>
-                <td>
-                    <pre class="lang1">Date.today    # Date: 2018-11-01 ((2458424j,0s,0n))
+                <td>date time</td>
+                <td><pre class="lang1">Date.today    # Date: 2018-11-01 ((2458424j,0s,0n))
 Time.now      # Time: 2018-11-01 15:32:07 +0900
 t = Time.new
 t.to_date
@@ -168,371 +129,271 @@ t.to_s
 t.hour
 t.min
 t.sec
-</pre>
-                </td>
-                <td>
-                    <pre class="lang2">Date.now();            // number 1541041100273
+</pre></td>
+                <td><pre class="lang2">Date.now();            // number 1541041100273
 const d = new Date();  // object 2018-11-01T02:51:48.938Z
 Date.parse(d);
 d.getTime();
 d.getHours();
 d.getMinutes();
 d.getSeconds();
-</pre>
-                </td>
+</pre></td>
             </tr>
             <tr class="row-basics">
-                <td>
-                    falsy values
-                </td>
-                <td>
-                    <pre class="lang1">false
+                <td>falsy values</td>
+                <td><pre class="lang1">false
 nil
-</pre>
-                </td>
-                <td>
-                    <pre class="lang2">false
+</pre></td>
+                <td><pre class="lang2">false
 null
 undefined
 NaN
 ''
-</pre>
-                </td>
+</pre></td>
             </tr>
             <tr class="row-basics">
-                <td>
-                    string interpolation
-                </td>
-                <td>
-                    <pre class="lang1">puts "\"#{var_name}\""</pre>
-                </td>
-                <td>
-                    <pre class="lang2">console.log(`${varName}`);</pre>
-                </td>
+                <td>string interpolation</td>
+                <td><pre class="lang1">puts "\"#{var_name}\""</pre></td>
+                <td><pre class="lang2">console.log(`${varName}`);</pre></td>
             </tr>
             <tr class="row-basics">
-                <td>
-                    string concatenation
-                </td>
-                <td>
-                    <pre class="lang1">"1" + "10"      # "110"
+                <td>string concatenation</td>
+                <td><pre class="lang1">"1" + "10"      # "110"
 "z" * 3         # "zzz"  Note: 3 * "z" won't work
 "z" * 3 + ".."  # "zzz.."
 "abc" + 123     # TypeError
 "5" * "3"       # TypeError
-</pre>
-                </td>
-                <td>
-                    <pre class="lang2">"1" + "10"        // "110"
+</pre></td>
+                <td><pre class="lang2">"1" + "10"        // "110"
 "z" * 3           // NaN
 "z" * 3 + ".."    // "NaN.."
 "abc" + 123       // "abc123"
 "5" * "3"         // 15
-</pre>
-                </td>
+</pre></td>
             </tr>
             <tr class="row-basics">
-                <td>
-                    equal
-                </td>
-                <td>
-                    <pre class="lang1">1 == 1.0        # true
+                <td>equal</td>
+                <td><pre class="lang1">1 == 1.0        # true
 (1..5) === 3    # true
 1.eql? 1.0      # false
 123.equal? 123  # true
 "1".equal? "1"  # false (different object id)
-</pre>
-                </td>
-                <td>
-                    <pre class="lang2">123 == "123"   // true
+</pre></td>
+                <td><pre class="lang2">123 == "123"   // true
 123 === "123"  // false
-</pre>
-                </td>
+</pre></td>
             </tr>
             <tr class="row-basics">
-                <td>
-                    parsing
-                </td>
-                <td>
-                    <pre class="lang1">str.to_i
+                <td>parsing</td>
+                <td><pre class="lang1">str.to_i
 num.to_f
 int.to_s
-</pre>
-                </td>
-                <td>
-                    <pre class="lang2">parseInt(str, 10);
+</pre></td>
+                <td><pre class="lang2">parseInt(str, 10);
 parseFloat(num);
 int.toString();
-</pre>
-                </td>
+</pre></td>
             </tr>
             <tr class="row-basics">
-                <td>
-                    type check
-                </td>
-                <td>
-                    <pre class="lang1">obj.class
-</pre>
-                </td>
-                <td>
-                    <pre class="lang2">typeof obj
+                <td>type check</td>
+                <td><pre class="lang1">obj.class
+</pre></td>
+                <td><pre class="lang2">typeof obj
 obj.constructor.name  // more precise than typeof
 obj instanceof Type   // returns a boolean
 Object.prototype.toString.call(obj)  // '[object Type]'
-</pre>
-                </td>
+</pre></td>
             </tr>
             <tr class="row-basics">
-                <td>
-                    incrementing
-                </td>
-                <td>
-                    <pre class="lang1">123.next    # 124
+                <td>incrementing</td>
+                <td><pre class="lang1">123.next    # 124
 "abc".next  # "abd"
-</pre>
-                </td>
-                <td>
-                    <pre class="lang2">i = 123
+</pre></td>
+                <td><pre class="lang2">i = 123
 i++
 i--
-</pre>
-                </td>
+</pre></td>
             </tr>
             <tr class="row-basics">
-                <td>
-                    remove white spaces
-                </td>
-                <td>
-                    <pre class="lang1">str.strip</pre>
-                </td>
-                <td>
-                    <pre class="lang2">str.trim();</pre>
-                </td>
+                <td>remove white spaces</td>
+                <td><pre class="lang1">str.strip</pre></td>
+                <td><pre class="lang2">str.trim();</pre></td>
             </tr>
             <tr class="row-basics">
-                <td>
-                    string caps
-                </td>
-                <td>
-                    <pre class="lang1">str.upcase
+                <td>string caps</td>
+                <td><pre class="lang1">str.upcase
 str.downcase
 str.capitalize
-</pre>
-                </td>
-                <td>
-                    <pre class="lang2">str.toUpperCase();
+</pre></td>
+                <td><pre class="lang2">str.toUpperCase();
 str.toLowerCase();
-</pre>
-                </td>
+</pre></td>
             </tr>
             <tr class="row-basics">
-                <td>
-                    string index
-                </td>
-                <td>
-                    <pre class="lang1">str[i]
-</pre>
-                </td>
-                <td>
-                    <pre class="lang2">str[i];
+                <td>string index</td>
+                <td><pre class="lang1">str[i]
+</pre></td>
+                <td><pre class="lang2">str[i];
 str.charAt(i);
-</pre>
-                </td>
+</pre></td>
             </tr>
             <tr class="row-basics">
-                <td>
-                    string last char
-                </td>
-                <td>
-                    <pre class="lang1">str[-1]</pre>
-                </td>
-                <td>
-                    <pre class="lang2">str.slice(-1);
+                <td>string last char</td>
+                <td><pre class="lang1">str[-1]</pre></td>
+                <td><pre class="lang2">str.slice(-1);
 str.substr(-1);
-</pre>
-                </td>
+</pre></td>
             </tr>
             <tr class="row-basics">
-                <td>
-                    array index
-                </td>
-                <td>
-                    <pre class="lang1">array[1]    # returns nil if index out of range
+                <td>array index</td>
+                <td><pre class="lang1">array[1]    # returns nil if index out of range
 array[-1]   # returns last item in list
-</pre>
-                </td>
-                <td>
-                    <pre class="lang2">array[1]    // returns undefined if index out of range array[-1]   // returns undefined</pre>
-                </td>
+</pre></td>
+                <td><pre class="lang2">array[1]    // returns undefined if index out of range array[-1]   // returns undefined</pre></td>
             </tr>
             <tr class="row-basics">
-                <td>
-                    regex match
-                </td>
-                <td>
-                    <pre class="lang1">str.match(regexp) # returns a MatchData or nil
+                <td>regex match</td>
+                <td><pre class="lang1">str.match(regexp) # returns a MatchData or nil
 str.scan(regexp)  # returns an array of strings
-</pre>
-                </td>
-                <td>
-                    <pre class="lang2">str.match(regexp); // returns an Array
+</pre></td>
+                <td><pre class="lang2">str.match(regexp); // returns an Array
 pattern.exec(text);
-</pre>
-                </td>
+</pre></td>
             </tr>
             <tr class="row-basics">
-                <td>
-                    array crud
-                </td>
-                <td>
-                    <pre class="lang1">array.push(obj)
+                <td>array crud</td>
+                <td><pre class="lang1">array.push(obj)
 array << obj
-</pre>
-                </td>
-                <td>
-                    <pre class="lang2">array.push(obj);
+</pre></td>
+                <td><pre class="lang2">array.push(obj);
 array.splice(index, count, items);
 array.splice(3, 1);
 // remove: modify 1 item at index 3 to null
-</pre>
-                </td>
+</pre></td>
             </tr>
             <tr class="row-basics">
-                <td>
-                    first n elements
-                </td>
-                <td>
-                    <pre class="lang1">objs.first(n)
+                <td>first n elements</td>
+                <td><pre class="lang1">objs.first(n)
 objs.take(n)
 objs[0...n]
 objs[0, n]
-</pre>
-                </td>
-                <td>
-                    <pre class="lang2">objs.slice(0, n);
+</pre></td>
+                <td><pre class="lang2">objs.slice(0, n);
 const array = [1,2,3,4,5];
 array.length = 3; // array is now [1, 2, 3]
-</pre>
-                </td>
+</pre></td>
             </tr>
             <tr class="row-basics">
-                <td>
-                    size count length
-                </td>
-                <td>
-                    <pre class="lang1">ary.size   # faster than ary.count
+                <td>size count length</td>
+                <td><pre class="lang1">ary.size   # faster than ary.count
 ary.count
 ary.length
-</pre>
-                </td>
-                <td>
-                    <pre class="lang2"></pre>
-                </td>
+</pre></td>
+                <td><pre class="lang2"># ary.size() is not native js
+ary.length
+# length is highest index + 1, number including empty items
+# length only works when array key is number, not strings
+</pre></td>
             </tr>
             <tr class="row-basics">
-                <td>
-                    string manipulation width
-                </td>
-                <td>
-                    <pre class="lang1">?* * 3           # "*" * 3
+                <td>string manipulation width</td>
+                <td><pre class="lang1">?* * 3           # "*" * 3
 'c'.center(10)   # '    c    '
-</pre>
-                </td>
-                <td>
-                    <pre class="lang2"></pre>
-                </td>
+</pre></td>
+                <td><pre class="lang2"></pre></td>
             </tr>
             <tr class="row-basics">
-                <td>
-                    partition set
-                </td>
-                <td>
-                    <pre class="lang1">str.partition(substr)   # [head, match, tail]
-</pre>
-                </td>
-                <td>
-                    <pre class="lang2"></pre>
-                </td>
+                <td>partition set</td>
+                <td><pre class="lang1">str.partition(substr)   # [head, match, tail]
+</pre></td>
+                <td><pre class="lang2"></pre></td>
             </tr>
             <tr class="row-basics">
-                <td>
-                    random numbers strings
-                </td>
-                <td>
-                    <pre class="lang1">rand(10) # rand takes integers only
+                <td>random numbers strings</td>
+                <td><pre class="lang1">rand(10) # rand takes integers only
 rand(65..90).chr  # returns a random cap letter
-</pre>
-                </td>
-                <td>
-                    <pre class="lang2"></pre>
-                </td>
+</pre></td>
+                <td><pre class="lang2"></pre></td>
             </tr>
             <tr class="row-basics">
-                <td>
-                    sample
-                </td>
-                <td>
-                    <pre class="lang1">('A'..'Z').to_a.sample(10)  # not random, no repeated values
-</pre>
-                </td>
-                <td>
-                    <pre class="lang2"></pre>
-                </td>
+                <td>sample</td>
+                <td><pre class="lang1">('A'..'Z').to_a.sample(10)  # not random, no repeated values
+</pre></td>
+                <td><pre class="lang2"></pre></td>
             </tr>
             <tr class="row-basics">
-                <td>
-                    json parse url
-                </td>
-                <td>
-                    <pre class="lang1">str = open(url).read
+                <td>json parse url</td>
+                <td><pre class="lang1">str = open(url).read
 JSON.parse(str)
-</pre>
-                </td>
-                <td>
-                    <pre class="lang2"></pre>
-                </td>
+</pre></td>
+                <td><pre class="lang2"></pre></td>
+            </tr>
+            <tr class="row-basics">
+                <td>sort compare list</td>
+                <td><pre class="lang1">a.sort_by { |x| x[:earnings] }
+a.sort { |x, y| y[:earnings] <=> x[:earnings] } # greatest to smallest
+
+# Note: sort takes 2 args, compares with <=> spaceship
+# one <=> two returns: 0 if equal
+                       1 if one > two
+                      -1 if one < two
+</pre></td>
+                <td><pre class="lang2">items.sort();  // changes original array, compare func optional
+items.sort(function (a, b) {
+  // ascending value, descending price
+  return a.value - b.value || b.price - a.price;
+});
+</pre></td>
+            </tr>
+            <tr class="row-basics">
+                <td>randomize array items</td>
+                <td><pre class="lang1">ary.shuffle
+</pre></td>
+                <td><pre class="lang2">function shuffle(a) {
+  for (let i = a.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}  // shuffle(ary);
+</pre></td>
+            </tr>
+            <tr class="row-basics">
+                <td>cover include contain item in a list</td>
+                <td><pre class="lang1">('a'..'z').cover?('yellow')  # => true
+('a'..'z').include?('yellow')  # => false
+('yellaa'..'yellzz').include?('yellow')  # => true
+</pre></td>
+                <td><pre class="lang2">['a', 'b', 'c'].includes('a')  // true
+['a', 'b', 'c'].includes('a', 2)  // searching from index 2, so false
+</pre></td>
             </tr>
             <!-- Whatever is here will appear at the top -->
             <tr class="row-functions">
-                <td>
-                    defining funtions
-                </td>
-                <td>
-                    <pre class="lang1">def square(x)
+                <td>defining funtions</td>
+                <td><pre class="lang1">def square(x)
   x * x
 end
-</pre>
-                </td>
-                <td>
-                    <pre class="lang2">function square(x) {
+</pre></td>
+                <td><pre class="lang2">function square(x) {
   return x * x;
 }
-</pre>
-                </td>
+</pre></td>
             </tr>
             <tr class="row-functions">
-                <td>
-                    short functions (arrow lambda proc)
-                </td>
-                <td>
-                    <pre class="lang1">square = -> (x) { x * x }
+                <td>short functions (arrow lambda proc)</td>
+                <td><pre class="lang1">square = -> (x) { x * x }
 square = lambda {|x| x * x }
 square = Proc.new {|x| x * x}
 square.call(5) # => 10
-</pre>
-                </td>
-                <td>
-                    <pre class="lang2">const square = x => x * x;
+</pre></td>
+                <td><pre class="lang2">const square = x => x * x;
 const square = (x, y) => { x * y }
-</pre>
-                </td>
+</pre></td>
             </tr>
             <tr class="row-functions">
-                <td>
-                    switch case
-                </td>
-                <td>
-                    <pre class="lang1">case var
+                <td>switch case</td>
+                <td><pre class="lang1">case var
 when 1..50
   #
 when 61..100
@@ -540,10 +401,8 @@ when 61..100
 else
   #
 end
-</pre>
-                </td>
-                <td>
-                    <pre class="lang2">switch(var) {
+</pre></td>
+                <td><pre class="lang2">switch(var) {
   case x:
     return x;
     break;
@@ -553,15 +412,11 @@ end
   default:
     return 0;
 }
-</pre>
-                </td>
+</pre></td>
             </tr>
             <tr class="row-functions">
-                <td>
-                    if else conditional
-                </td>
-                <td>
-                    <pre class="lang1">if condition_1
+                <td>if else conditional</td>
+                <td><pre class="lang1">if condition_1
   "condition_1"
 elsif condition_2
   "condition_2"
@@ -571,61 +426,44 @@ end
 
 unless condition   # if not
 end
-</pre>
-                </td>
-                <td>
-                    <pre class="lang2">if (condition_1) {
+</pre></td>
+                <td><pre class="lang2">if (condition_1) {
   return "condition_1";
 } else if (condition_2) {
   return "condition_2";
 } else {
   return "other";
 }
-</pre>
-                </td>
+</pre></td>
             </tr>
             <tr class="row-functions">
-                <td>
-                    key statements
-                </td>
-                <td>
-                    <pre class="lang1">raise
-fail
-break
-next
-redo
-rescue
-retry
-undef
-</pre>
-                </td>
-                <td>
-                    <pre class="lang2"></pre>
-                </td>
+                <td>key statements</td>
+                <td><pre class="lang1">raise / fail
+begin, rescue, retry, ensure
+throw, catch
+break / next / redo
+</pre></td>
+                <td><pre class="lang2">try
+catch
+throw
+finally
+break / continue
+</pre></td>
             </tr>
             <tr class="row-functions">
-                <td>
-                    begin end flow control
-                </td>
-                <td>
-                    <pre class="lang1">END { # runs last
+                <td>begin end flow control</td>
+                <td><pre class="lang1">END { # runs last
    puts "Terminating Ruby Program"
 }
 BEGIN { # runs first
    puts "Initializing Ruby Program"
 }
-</pre>
-                </td>
-                <td>
-                    <pre class="lang2"></pre>
-                </td>
+</pre></td>
+                <td><pre class="lang2"></pre></td>
             </tr>
             <tr class="row-functions">
-                <td>
-                    while loop
-                </td>
-                <td>
-                    <pre class="lang1">while condition [do]
+                <td>while loop</td>
+                <td><pre class="lang1">while condition [do]
    # ...
 end
 
@@ -641,144 +479,100 @@ end
 begin
   { ... }
 end while condition
-</pre>
-                </td>
-                <td>
-                    <pre class="lang2"></pre>
-                </td>
+</pre></td>
+                <td><pre class="lang2">label:    // userful in nested loop, with continue break
+while (true) {
+  // ...
+}
+
+let i = 0;
+do {
+  i += 1;
+  // ...
+} while (i < 5);
+</pre></td>
             </tr>
             <tr class="row-functions">
-                <td>
-                    for loop
-                </td>
-                <td>
-                    <pre class="lang1">for i in 0..5
+                <td>for loop</td>
+                <td><pre class="lang1">for i in 0..5
    # ...
 end
-</pre>
-                </td>
-                <td>
-                    <pre class="lang2"></pre>
-                </td>
+</pre></td>
+                <td><pre class="lang2">let step;
+for (step = 0; step < 5; step++) {
+  // ...
+}
+
+// for...in vs. for...of
+var arr = [3, 5, 7];
+arr.foo = 'hello';
+
+for (var i in arr) {  // property keys
+   console.log(i); // logs "0", "1", "2", "foo"
+}
+
+for (var i of arr) {  // property values
+   console.log(i); // logs 3, 5, 7
+}
+</pre></td>
             </tr>
             <tr class="row-functions">
-                <td>
-                    loop each
-                </td>
-                <td>
-                    <pre class="lang1">(1..5).each { ... }
+                <td>loop each</td>
+                <td><pre class="lang1">(1..5).each { ... }
 items.each { |item| # do something }
 items.each_with_index { |item, i| items[i] }
 n.times  # without block returns a enumerable, stream from 0 to n-1 if used with map
 n.step   # counts to infinity
-</pre>
-                </td>
-                <td>
-                    <pre class="lang2">items.forEach(item => // do something );
+</pre></td>
+                <td><pre class="lang2">items.forEach(item => // do something );
 items.forEach((x, index) => items[index] = x * 2 );
-</pre>
-                </td>
+</pre></td>
             </tr>
             <tr class="row-functions">
-                <td>
-                    select filter
-                </td>
-                <td>
-                    <pre class="lang1">array.select {|x| x.even? }
+                <td>select filter</td>
+                <td><pre class="lang1">array.select {|x| x.even? }
 array.reject {|x| x.odd? }
-</pre>
-                </td>
-                <td>
-                    <pre class="lang2">array.filter(x => x % 2 == 0);</pre>
-                </td>
+</pre></td>
+                <td><pre class="lang2">array.filter(x => x % 2 == 0);</pre></td>
             </tr>
             <tr class="row-functions">
-                <td>
-                    reduce
-                </td>
-                <td>
-                    <pre class="lang1">array.reduce(:+)
+                <td>reduce</td>
+                <td><pre class="lang1">array.reduce(:+)
 array.reduce(0) {|sum, curr| sum + curr}
-</pre>
-                </td>
-                <td>
-                    <pre class="lang2">array.reduce((sum, curr) => sum + curr);</pre>
-                </td>
+</pre></td>
+                <td><pre class="lang2">array.reduce((sum, curr) => sum + curr);</pre></td>
             </tr>
             <tr class="row-functions">
-                <td>
-                    consecutive n elements, group every n element
-                </td>
-                <td>
-                    <pre class="lang1">array.each_cons(n).to_a
+                <td>consecutive n elements, group every n element</td>
+                <td><pre class="lang1">array.each_cons(n).to_a
 array.each_slice(n)
-</pre>
-                </td>
-                <td>
-                    <pre class="lang2"></pre>
-                </td>
+</pre></td>
+                <td><pre class="lang2"></pre></td>
             </tr>
             <tr class="row-functions">
-                <td>
-                    
-                </td>
-                <td>
-                    <pre class="lang1"></pre>
-                </td>
-                <td>
-                    <pre class="lang2"></pre>
-                </td>
-            </tr>
-            <tr class="row-functions">
-                <td>
-                    
-                </td>
-                <td>
-                    <pre class="lang1"></pre>
-                </td>
-                <td>
-                    <pre class="lang2"></pre>
-                </td>
-            </tr>
-            <tr class="row-functions">
-                <td>
-                    hash object
-                </td>
-                <td>
-                    <pre class="lang1">hash = { name: "Iff", age: 3 }
+                <td>hash object</td>
+                <td><pre class="lang1">hash = { name: "Iff", age: 3 }
 hash.keys       # [:name, :age]
 hash[:name]
 hash[:new_key] = value;
-</pre>
-                </td>
-                <td>
-                    <pre class="lang2">const obj = { name: "Iff", age: 3 };
+</pre></td>
+                <td><pre class="lang2">const obj = { name: "Iff", age: 3 };
 Object.keys;       // ['name', 'age']
 obj.name;
 obj.new_key = value;
 obj.set(key, value);
-</pre>
-                </td>
+</pre></td>
             </tr>
             <tr class="row-functions">
-                <td>
-                    hash map iterator
-                </td>
-                <td>
-                    <pre class="lang1">hash.each { |key, value| #... }
-</pre>
-                </td>
-                <td>
-                    <pre class="lang2">obj.forEach((value, key) => { //... });
-</pre>
-                </td>
+                <td>hash map iterator</td>
+                <td><pre class="lang1">hash.each { |key, value| #... }
+</pre></td>
+                <td><pre class="lang2">obj.forEach((value, key) => { //... });
+</pre></td>
             </tr>
             <tr class="row-functions">
-                <td>
-                    class structure
-                </td>
-                <td>
-                    <pre class="lang1">class MyClass
+                <td>class structure</td>
+                <td><pre class="lang1">class MyClass
   attr_accessor
   def initialize
     # ...
@@ -789,10 +583,8 @@ obj.set(key, value);
   def self.class_method / end
   # ...
 end
-</pre>
-                </td>
-                <td>
-                    <pre class="lang2">class MyClass {
+</pre></td>
+                <td><pre class="lang2">class MyClass {
   constructor(...) {
     // ...
   }
@@ -803,15 +595,11 @@ end
   static staticMethod(..) {}
   // ...
 }
-</pre>
-                </td>
+</pre></td>
             </tr>
             <tr class="row-functions">
-                <td>
-                    class example
-                </td>
-                <td>
-                    <pre class="lang1">class Person
+                <td>class example</td>
+                <td><pre class="lang1">class Person
   attr_reader :name :age
   attr_writer :country
 
@@ -832,10 +620,8 @@ end
 
 iff = Person.new("Iff", 3, "Tokyo")
 iff.class     # Person
-</pre>
-                </td>
-                <td>
-                    <pre class="lang2">class Person
+</pre></td>
+                <td><pre class="lang2">class Person
   constructor(name, age, country) {
     this.name = name;
     this.age = age;
@@ -856,31 +642,24 @@ iff.class     # Person
 
 const iff = new User("Iff", 3, "Tokyo");
 typeof iff    // 'object'
-</pre>
-                </td>
+</pre></td>
             </tr>
             <tr class="row-functions">
-                <td>
-                    subclass inheritance
-                </td>
-                <td>
-                    <pre class="lang1">class Programmer < Person
+                <td>subclass inheritance</td>
+                <td><pre class="lang1">class Programmer < Person
   def initialize(name, age, country, language)
     super(name, age, country)
     @languages = language
   end
 end
-</pre>
-                </td>
-                <td>
-                    <pre class="lang2">class Programmer extends Person {
+</pre></td>
+                <td><pre class="lang2">class Programmer extends Person {
   constructor(name, age, country, language)) {
     super(name, age, country);
     this.language = language;
   }
 }
-</pre>
-                </td>
+</pre></td>
             </tr>
         </tbody>
     </table>
@@ -889,7 +668,7 @@ end
     <div class="container">
 <div class="footer">
   <div class="footer-links">
-    <a href="#"><i class="fab fa-github"></i></a>
+    <a href="https://github.com/nlogx"><i class="fab fa-github"></i></a>
   </div>
   <div class="footer-copyright">
     nlogx <i class="fa fa-heart"></i>
