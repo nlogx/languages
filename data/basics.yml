@@ -203,7 +203,12 @@
     ary.size   # faster than ary.count
     ary.count
     ary.length
-  js:
+  js: |
+    # ary.size() is not native js
+    ary.length
+    # length is highest index + 1, number including empty items
+    # length only works when array key is number, not strings
+
 - keyword: string manipulation width
   ruby: |
     ?* * 3           # "*" * 3
@@ -235,7 +240,7 @@
     a.sort_by { |x| x[:earnings] }
     a.sort { |x, y| y[:earnings] <=> x[:earnings] } # greatest to smallest
 
-    # SORT block takes TWO arguments and compares with <=> spaceship
+    # Note: sort takes 2 args, compares with <=> spaceship
     # one <=> two returns: 0 if equal
                            1 if one > two
                           -1 if one < two
@@ -245,9 +250,14 @@
       // ascending value, descending price
       return a.value - b.value || b.price - a.price;
     });
-# - keyword:
-#   ruby:
-#   js:
+- keyword: cover include contain item in a list
+  ruby: |
+    ('a'..'z').cover?('yellow')  # => true
+    ('a'..'z').include?('yellow')  # => false
+    ('yellaa'..'yellzz').include?('yellow')  # => true
+  js: |
+    ['a', 'b', 'c'].includes('a')  // true
+    ['a', 'b', 'c'].includes('a', 2)  // searching from index 2, so false
 # - keyword:
 #   ruby:
 #   js:
