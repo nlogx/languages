@@ -60,15 +60,16 @@
     }
 - keyword: key statements
   ruby: |
-    raise
-    fail
-    break
-    next
-    redo
-    rescue
-    retry
-    undef
+    raise / fail
+    begin, rescue, retry, ensure
+    throw, catch
+    break / next / redo
   js: |
+    try
+    catch
+    throw
+    finally
+    break / continue
 - keyword: begin end flow control
   ruby: |
     END { # runs last
@@ -98,11 +99,40 @@
       { ... }
     end while condition
   js: |
+    label:    // userful in nested loop, with continue break
+    while (true) {
+      // ...
+    }
+
+    let i = 0;
+    do {
+      i += 1;
+      // ...
+    } while (i < 5);
+
+
 - keyword: for loop
   ruby: |
     for i in 0..5
        # ...
     end
+  js: |
+    let step;
+    for (step = 0; step < 5; step++) {
+      // ...
+    }
+
+    // for...in vs. for...of
+    var arr = [3, 5, 7];
+    arr.foo = 'hello';
+
+    for (var i in arr) {  // property keys
+       console.log(i); // logs "0", "1", "2", "foo"
+    }
+
+    for (var i of arr) {  // property values
+       console.log(i); // logs 3, 5, 7
+    }
 - keyword: loop each
   ruby: |
     (1..5).each { ... }
@@ -127,14 +157,14 @@
   ruby: |
     array.each_cons(n).to_a
     array.each_slice(n)
-  js:
-- keyword:
-  ruby:
-  js:
+#   js:
+# - keyword:
+#   ruby:
+#   js:
 
-- keyword:
-  ruby:
-  js:
+# - keyword:
+#   ruby:
+#   js:
 #####################################################################
 
 - keyword: hash object

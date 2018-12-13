@@ -250,6 +250,19 @@
       // ascending value, descending price
       return a.value - b.value || b.price - a.price;
     });
+
+- keyword: randomize array items
+  ruby: |
+    ary.shuffle
+  js: |
+    function shuffle(a) {
+      for (let i = a.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [a[i], a[j]] = [a[j], a[i]];
+      }
+      return a;
+    }  // shuffle(ary);
+
 - keyword: cover include contain item in a list
   ruby: |
     ('a'..'z').cover?('yellow')  # => true
