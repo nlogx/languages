@@ -157,7 +157,7 @@
   ruby: |
     array.each_cons(n).to_a
     array.each_slice(n)
-#   js:
+  js:
 # - keyword:
 #   ruby:
 #   js:
