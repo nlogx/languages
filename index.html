@@ -144,11 +144,12 @@ d.getSeconds();
                 <td><pre class="lang1">false
 nil
 </pre></td>
-                <td><pre class="lang2">false
+                <td><pre class="lang2">0
+false
 null
 undefined
 NaN
-''
+'', "", ``
 </pre></td>
             </tr>
             <tr class="row-basics">
@@ -264,8 +265,10 @@ pattern.exec(text);
                 <td>array crud</td>
                 <td><pre class="lang1">array.push(obj)
 array << obj
+...
 </pre></td>
-                <td><pre class="lang2">array.push(obj);
+                <td><pre class="lang2">array.push(obj);   // opposite: array.unshift(obj)
+array.pop();       // opposite: array.shift()
 array.splice(index, count, items);
 array.splice(3, 1);
 // remove: modify 1 item at index 3 to null
@@ -313,7 +316,9 @@ ary.length
                 <td><pre class="lang1">rand(10) # rand takes integers only
 rand(65..90).chr  # returns a random cap letter
 </pre></td>
-                <td><pre class="lang2"></pre></td>
+                <td><pre class="lang2">Math.random()  // random num between 0, 1
+Math.floor((Math.random() * 10) + 1);
+</pre></td>
             </tr>
             <tr class="row-basics">
                 <td>sample</td>
@@ -498,8 +503,8 @@ do {
    # ...
 end
 </pre></td>
-                <td><pre class="lang2">let step;
-for (step = 0; step < 5; step++) {
+                <td><pre class="lang2">// var:single binding, let: new binding for each, useful in setTimeout
+for (let step = 0; step < 5; step++) {
   // ...
 }
 
@@ -507,7 +512,7 @@ for (step = 0; step < 5; step++) {
 var arr = [3, 5, 7];
 arr.foo = 'hello';
 
-for (var i in arr) {  // property keys
+for (const i in arr) {  // property keys
    console.log(i); // logs "0", "1", "2", "foo"
 }
 
@@ -537,7 +542,7 @@ array.reject {|x| x.odd? }
             </tr>
             <tr class="row-functions">
                 <td>reduce</td>
-                <td><pre class="lang1">array.reduce(:+)
+                <td><pre class="lang1">array.reduce(:+)    # same as inject
 array.reduce(0) {|sum, curr| sum + curr}
 </pre></td>
                 <td><pre class="lang2">array.reduce((sum, curr) => sum + curr);</pre></td>
@@ -557,7 +562,9 @@ hash[:name]
 hash[:new_key] = value;
 </pre></td>
                 <td><pre class="lang2">const obj = { name: "Iff", age: 3 };
-Object.keys;       // ['name', 'age']
+Object.keys(obj);       // ['name', 'age']
+Object.values(obj);     // ['Iff', 3]
+Object.entries(obj);    // [ ['name', 'Iff'], ['age', 3] ]
 obj.name;
 obj.new_key = value;
 obj.set(key, value);
