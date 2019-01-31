@@ -183,6 +183,7 @@
   ruby: |
     array.push(obj)
     array << obj
+    ...
   js: |
     array.push(obj);
     array.splice(index, count, items);

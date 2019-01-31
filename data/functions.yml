@@ -117,8 +117,8 @@
        # ...
     end
   js: |
-    let step;
-    for (step = 0; step < 5; step++) {
+    // var:single binding, let: new binding for each, useful in setTimeout
+    for (let step = 0; step < 5; step++) {
       // ...
     }
 
@@ -126,7 +126,7 @@
     var arr = [3, 5, 7];
     arr.foo = 'hello';
 
-    for (var i in arr) {  // property keys
+    for (const i in arr) {  // property keys
        console.log(i); // logs "0", "1", "2", "foo"
     }
 
@@ -150,7 +150,7 @@
   js: array.filter(x => x % 2 == 0);
 - keyword: reduce
   ruby: |
-    array.reduce(:+)
+    array.reduce(:+)    # same as inject
     array.reduce(0) {|sum, curr| sum + curr}
   js: array.reduce((sum, curr) => sum + curr);
 - keyword: consecutive n elements, group every n element
@@ -175,7 +175,9 @@
     hash[:new_key] = value;
   js: |
     const obj = { name: "Iff", age: 3 };
-    Object.keys;       // ['name', 'age']
+    Object.keys(obj);       // ['name', 'age']
+    Object.values(obj);     // ['Iff', 3]
+    Object.entries(obj);    // [ ['name', 'Iff'], ['age', 3] ]
     obj.name;
     obj.new_key = value;
     obj.set(key, value);
