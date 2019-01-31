@@ -86,11 +86,12 @@
     false
     nil
   js: |
+    0
     false
     null
     undefined
     NaN
-    ''
+    '', "", ``
 - keyword: string interpolation
   ruby: puts "\"#{var_name}\""
   js: console.log(`${varName}`);
@@ -185,7 +186,8 @@
     array << obj
     ...
   js: |
-    array.push(obj);
+    array.push(obj);   // opposite: array.unshift(obj)
+    array.pop();       // opposite: array.shift()
     array.splice(index, count, items);
     array.splice(3, 1);
     // remove: modify 1 item at index 3 to null
