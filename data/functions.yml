@@ -16,7 +16,24 @@
     square.call(5) # => 10
   js: |
     const square = x => x * x;
-    const square = (x, y) => { x * y }
+    const square = (x, y) => { x * y };
+- keyword: IIFE
+  ruby: |
+    (->{ puts "Hey, I'm IIFE" }).()
+
+    send def execute_right_now
+      puts "This line prints right away"
+    end
+  js: |
+    (function() {
+       console.log("I am an IIFE, too!");
+    })();
+
+    // !,+,-,~, or void needs to prefex function
+    // so it's a func expression instead of definition
+    !function() {
+      alert("Hello from IIFE!");
+    }();
 - keyword: switch case
   ruby: |
     case var
@@ -99,7 +116,7 @@
       { ... }
     end while condition
   js: |
-    label:    // userful in nested loop, with continue break
+    label:    // useful in nested loop, with continue break
     while (true) {
       // ...
     }
@@ -255,7 +272,7 @@
         console.log(this.name + ' is walking.');
       }
 
-    const iff = new User("Iff", 3, "Tokyo");
+    const iff = new Person("Iff", 3, "Tokyo");
     typeof iff    // 'object'
 - keyword: subclass inheritance
   ruby: |
