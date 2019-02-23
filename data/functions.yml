@@ -164,7 +164,10 @@
   ruby: |
     array.select {|x| x.even? }
     array.reject {|x| x.odd? }
-  js: array.filter(x => x % 2 == 0);
+  js: |
+    array.filter(x => x % 2 == 0);
+    array.filter(x => { return x > 4})
+    // if condition wrapped in {}, must use return keyword
 - keyword: reduce
   ruby: |
     array.reduce(:+)    # same as inject

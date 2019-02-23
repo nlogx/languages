@@ -161,6 +161,7 @@
   js: |
     str[i];
     str.charAt(i);
+    str.indexOf(substr)    // returns -1 if not found
 - keyword: string last char
   ruby: str[-1]
   js: |
